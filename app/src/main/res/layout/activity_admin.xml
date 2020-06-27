@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    tools:context=".DashboardAdminActivity">
+    tools:context=".DashboardActivity">
 
     <TextView
         android:id="@+id/dashboard_title"
@@ -68,7 +67,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"/>
 
-        <view
+        <View
             android:id="@+id/hairline"
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -92,7 +91,36 @@
             android:id="@+id/list_kandidat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
             android:layout_below="@id/des_daftar_kandidat"/>
+
+        <RelativeLayout
+            android:id="@+id/button_tambahkandidat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="18dp"
+            android:elevation="10dp"
+            android:translationZ="2dp"
+            android:outlineProvider="paddedBounds"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/shape_radius_white"
+            android:layout_below="@id/list_kandidat">
+            <ImageView
+                android:id="@+id/icontambah"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/plus"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tambah Kandidat"
+                android:textSize="22sp"
+                android:textColor="#A8A8A8"
+                android:textStyle="bold"
+                android:layout_marginStart="12dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/icontambah"/>
+        </RelativeLayout>
 
     </RelativeLayout>
 
