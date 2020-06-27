@@ -2,8 +2,12 @@ package project.akbaralzaini.evoting;
 
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +16,8 @@ import project.akbaralzaini.evoting.adapter.KandidatAdapter;
 import project.akbaralzaini.evoting.model.Kandidat;
 
 public class DashboardActivity extends Activity {
+
+    RelativeLayout ButtonTambah;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,5 +57,26 @@ public class DashboardActivity extends Activity {
         listKandidat.add(kandidat3);
 
         listView.setAdapter(new KandidatAdapter(this,R.layout.list_item,listKandidat));
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Intent i = new Intent(DashboardActivity.this, DetailKandidatActivity.class);
+                startActivity(i);
+            }
+        });
+
+        ButtonTambah = findViewById(R.id.button_tambahkandidat);
+
+        ButtonTambah.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent i = new Intent(DashboardActivity.this, TambahKandidatActivity.class);
+                startActivity(i);
+            }
+        });
     }
+
+
+
 }

@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_agakpputih"
+    tools:context=".EditKandidatActivity">
+
+    <RelativeLayout
+        android:id="@+id/topnavbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:paddingVertical="16dp"
+        android:paddingHorizontal="8dp"
+        android:background="@drawable/shape_radius_bottom_ungu">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kandidat 1"
+            android:textColor="@color/backgroud_putih"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:layout_centerInParent="true"/>
+        <ImageView
+            android:id="@+id/backicon"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/arrow_back"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/backicon"
+            android:layout_marginStart="8dp"
+            android:text="kembali"
+            android:textColor="@color/backgroud_putih"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_marginTop="18dp"
+        android:layout_marginHorizontal="12dp"
+        android:layout_below="@id/topnavbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="12dp"
+            android:paddingHorizontal="12dp"
+            android:background="@drawable/shape_top_radius_white">
+            <ImageView
+                android:id="@+id/iconnama"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/user_graduate"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginVertical="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_toRightOf="@id/iconnama">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nama"/>
+                <EditText
+                    android:id="@+id/nama_kandidat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="Nama"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="12dp"
+            android:paddingHorizontal="12dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/backgroud_putih">
+            <ImageView
+                android:id="@+id/iconkelas"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/material_class"/>
+            <LinearLayout
+                android:layout_marginVertical="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp"
+                android:layout_toRightOf="@id/iconkelas">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kelas"/>
+                <EditText
+                    android:id="@+id/kelas_kandidat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="XI IPA 7"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="12dp"
+            android:paddingHorizontal="12dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/backgroud_putih">
+            <ImageView
+                android:id="@+id/iconttl"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/date_range"/>
+            <LinearLayout
+                android:layout_marginVertical="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp"
+                android:layout_toRightOf="@id/iconttl">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tempat, Tanggal Lahir"/>
+                <EditText
+                    android:id="@+id/ttl_kandidat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="place, hh mm yyyy"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="12dp"
+            android:paddingHorizontal="12dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/backgroud_putih">
+            <ImageView
+                android:id="@+id/iconnomor"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/map_marker"/>
+            <LinearLayout
+                android:layout_marginVertical="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp"
+                android:layout_toRightOf="@id/iconnomor">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nomor Urut"/>
+                <EditText
+                    android:id="@+id/nomor_kandidat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="1"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="12dp"
+            android:paddingHorizontal="12dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/backgroud_putih">
+            <ImageView
+                android:id="@+id/iconfoto"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/file_image"/>
+            <LinearLayout
+                android:layout_marginVertical="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp"
+                android:layout_toRightOf="@id/iconfoto">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Foto"/>
+                <TextView
+                    android:id="@+id/foto_kandidat"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="Pilih foto"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="12dp"
+            android:paddingHorizontal="12dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/backgroud_putih">
+            <ImageView
+                android:id="@+id/iconvisi"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/hashtag"/>
+            <LinearLayout
+                android:layout_marginVertical="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp"
+                android:layout_toRightOf="@id/iconvisi">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Visi"/>
+
+                <EditText
+                    android:id="@+id/visi_kandidat"
+                    android:inputType="text|textMultiLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="visi kandidat"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            android:translationZ="2dp"
+            android:outlineProvider="paddedBounds"
+            android:paddingVertical="12dp"
+            android:paddingHorizontal="12dp"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/shape_bottom_radius_white">
+            <ImageView
+                android:id="@+id/iconmisi"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/location_arrow"/>
+            <LinearLayout
+                android:layout_marginVertical="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp"
+                android:layout_toRightOf="@id/iconmisi">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Misi"/>
+
+                <EditText
+                    android:id="@+id/misi_kandidat"
+                    android:inputType="text|textMultiLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="misi kandidat"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Batal"
+                android:textSize="16dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="24dp"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/button_simpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="40dp"
+
+                android:layout_gravity="center"
+                android:background="@drawable/shape_radius_green"
+                android:text="Simpan"
+                android:textSize="16dp"
+                android:textColor="@color/backgroud_putih"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
