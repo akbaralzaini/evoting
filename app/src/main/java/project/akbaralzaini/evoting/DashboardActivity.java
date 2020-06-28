@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,9 +16,11 @@ import java.util.List;
 import project.akbaralzaini.evoting.adapter.KandidatAdapter;
 import project.akbaralzaini.evoting.model.Kandidat;
 
-public class DashboardActivity extends Activity {
+public class DashboardActivity extends Activity implements View.OnClickListener {
 
     RelativeLayout ButtonTambah;
+    TextView ButtonProfil;
+    TextView namaProfil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,15 +71,27 @@ public class DashboardActivity extends Activity {
         });
 
         ButtonTambah = findViewById(R.id.button_tambahkandidat);
+        ButtonProfil = findViewById(R.id.edit_button);
+        namaProfil = findViewById(R.id.nama_profil);
 
-        ButtonTambah.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Intent i = new Intent(DashboardActivity.this, TambahKandidatActivity.class);
-                startActivity(i);
-            }
-        });
+        namaProfil.setText("Akbar Alzaini");
+        ButtonTambah.setOnClickListener(this);
+        ButtonProfil.setOnClickListener(this);
+
     }
 
 
-
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.button_tambahkandidat:
+                Intent i = new Intent(DashboardActivity.this, TambahKandidatActivity.class);
+                startActivity(i);
+                break;
+            case R.id.edit_button:
+                Intent b = new Intent(DashboardActivity.this, ProfilActivity.class);
+                startActivity(b);
+                break;
+        }
+    }
 }

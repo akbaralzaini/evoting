@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">evoting</string>
+    <string name="tambah_button">Tambah</string>
+    <string name="batal">Batal</string>
+    <string name="misi_kandidat_hint">misi kandidat</string>
+    <string name="misi_title">Misi</string>
+    <string name="kandidat_baru">Kandidat Baru</string>
+    <string name="back_icon">back_icon</string>
+    <string name="kembali">kembali</string>
+    <string name="kelas">Kelas</string>
+    <string name="example_kelas">XI IPA 7</string>
+    <string name="nama">Nama</string>
+    <string name="visi">Visi</string>
+    <string name="visi_kandidat">visi kandidat</string>
 </resources>

@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TambahKandidatActivity"></activity>
+        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".EditProfilActivity" />
+        <activity android:name=".ProfilActivity" />
+        <activity android:name=".TambahKandidatActivity" />
         <activity android:name=".EditKandidatActivity" />
         <activity android:name=".DetailKandidatActivity" />
         <activity android:name=".DashboardActivity" />

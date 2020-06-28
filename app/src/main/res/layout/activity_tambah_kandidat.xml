@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,335 +11,367 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:paddingVertical="16dp"
-        android:paddingHorizontal="8dp"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
         android:background="@drawable/shape_radius_bottom_ungu">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Kandidat Baru"
+            android:text="@string/kandidat_baru"
             android:textColor="@color/backgroud_putih"
             android:textStyle="bold"
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:layout_centerInParent="true"/>
         <ImageView
             android:id="@+id/backicon"
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:src="@drawable/arrow_back"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"/>
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/back_icon" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/backicon"
+            android:layout_toEndOf="@id/backicon"
             android:layout_marginStart="8dp"
-            android:text="kembali"
+            android:text="@string/kembali"
             android:textColor="@color/backgroud_putih"
             android:layout_centerVertical="true"/>
 
     </RelativeLayout>
-    <LinearLayout
-        android:layout_marginTop="18dp"
-        android:layout_marginHorizontal="12dp"
+
+    <ScrollView
         android:layout_below="@id/topnavbar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingVertical="12dp"
-            android:paddingHorizontal="12dp"
-            android:background="@drawable/shape_top_radius_white">
-            <ImageView
-                android:id="@+id/iconnama"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:src="@drawable/user_graduate"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginVertical="12dp"
-                android:layout_marginStart="12dp"
-                android:layout_toRightOf="@id/iconnama">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Nama"/>
-                <EditText
-                    android:id="@+id/nama_kandidat"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:hint="Nama"/>
-
-            </LinearLayout>
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingVertical="12dp"
-            android:paddingHorizontal="12dp"
-            android:layout_marginTop="1dp"
-            android:background="@color/backgroud_putih">
-            <ImageView
-                android:id="@+id/iconkelas"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:src="@drawable/material_class"/>
-            <LinearLayout
-                android:layout_marginVertical="12dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginStart="12dp"
-                android:layout_toRightOf="@id/iconkelas">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Kelas"/>
-                <EditText
-                    android:id="@+id/kelas_kandidat"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:hint="XI IPA 7"/>
-
-            </LinearLayout>
-
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingVertical="12dp"
-            android:paddingHorizontal="12dp"
-            android:layout_marginTop="1dp"
-            android:background="@color/backgroud_putih">
-            <ImageView
-                android:id="@+id/iconttl"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:src="@drawable/date_range"/>
-            <LinearLayout
-                android:layout_marginVertical="12dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginStart="12dp"
-                android:layout_toRightOf="@id/iconttl">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Tempat, Tanggal Lahir"/>
-                <EditText
-                    android:id="@+id/ttl_kandidat"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:hint="place, hh mm yyyy"/>
-
-            </LinearLayout>
-
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingVertical="12dp"
-            android:paddingHorizontal="12dp"
-            android:layout_marginTop="1dp"
-            android:background="@color/backgroud_putih">
-            <ImageView
-                android:id="@+id/iconnomor"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:src="@drawable/map_marker"/>
-            <LinearLayout
-                android:layout_marginVertical="12dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginStart="12dp"
-                android:layout_toRightOf="@id/iconnomor">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Nomor Urut"/>
-                <EditText
-                    android:id="@+id/nomor_kandidat"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:hint="1"/>
-
-            </LinearLayout>
-
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingVertical="12dp"
-            android:paddingHorizontal="12dp"
-            android:layout_marginTop="1dp"
-            android:background="@color/backgroud_putih">
-            <ImageView
-                android:id="@+id/iconfoto"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:src="@drawable/file_image"/>
-            <LinearLayout
-                android:layout_marginVertical="12dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginStart="12dp"
-                android:layout_toRightOf="@id/iconfoto">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Foto"/>
-                <TextView
-                    android:id="@+id/foto_kandidat"
-                    android:inputType="text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:hint="Pilih foto"/>
-
-            </LinearLayout>
-
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingVertical="12dp"
-            android:paddingHorizontal="12dp"
-            android:layout_marginTop="1dp"
-            android:background="@color/backgroud_putih">
-            <ImageView
-                android:id="@+id/iconvisi"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:src="@drawable/hashtag"/>
-            <LinearLayout
-                android:layout_marginVertical="12dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginStart="12dp"
-                android:layout_toRightOf="@id/iconvisi">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Visi"/>
-
-                <EditText
-                    android:id="@+id/visi_kandidat"
-                    android:inputType="text|textMultiLine"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:hint="visi kandidat"/>
-
-            </LinearLayout>
-
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:elevation="10dp"
-            android:translationZ="2dp"
-            android:outlineProvider="paddedBounds"
-            android:paddingVertical="12dp"
-            android:paddingHorizontal="12dp"
-            android:layout_marginTop="1dp"
-            android:background="@drawable/shape_bottom_radius_white">
-            <ImageView
-                android:id="@+id/iconmisi"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:src="@drawable/location_arrow"/>
-            <LinearLayout
-                android:layout_marginVertical="12dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginStart="12dp"
-                android:layout_toRightOf="@id/iconmisi">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Misi"/>
-
-                <EditText
-                    android:id="@+id/misi_kandidat"
-                    android:inputType="text|textMultiLine"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:hint="misi kandidat"/>
-
-            </LinearLayout>
-
-
-        </RelativeLayout>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="30dp">
 
         <LinearLayout
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Batal"
-                android:textSize="16dp"
-                android:gravity="center_vertical"
-                android:paddingLeft="24dp"
-                android:layout_weight="1"/>
-            <Button
-                android:id="@+id/button_simpan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="40dp"
+            android:orientation="vertical">
 
-                android:layout_gravity="center"
-                android:background="@drawable/shape_radius_green"
-                android:text="Tambah"
-                android:textSize="16dp"
-                android:textColor="@color/backgroud_putih"
-                android:textStyle="bold"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:background="@drawable/shape_top_radius_white">
+                <ImageView
+                    android:id="@+id/iconnama"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/user_graduate"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_toEndOf="@id/iconnama">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nama"/>
+                    <EditText
+                        android:textSize="14sp"
+                        android:id="@+id/nama_kandidat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/nama"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/backgroud_putih">
+                <ImageView
+                    android:id="@+id/iconkelas"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/material_class"/>
+                <LinearLayout
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp"
+                    android:layout_toEndOf="@id/iconkelas">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/kelas"/>
+                    <EditText
+                        android:id="@+id/kelas_kandidat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/example_kelas"/>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/backgroud_putih">
+                <ImageView
+                    android:id="@+id/iconttl"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/date_range"/>
+                <LinearLayout
+                    android:layout_marginVertical="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp"
+                    android:layout_toRightOf="@id/iconttl">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tempat, Tanggal Lahir"/>
+                    <EditText
+                        android:id="@+id/ttl_kandidat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="place, hh mm yyyy"/>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/backgroud_putih">
+                <ImageView
+                    android:id="@+id/iconnomor"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/map_marker"/>
+                <LinearLayout
+                    android:layout_marginVertical="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp"
+                    android:layout_toRightOf="@id/iconnomor">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nomor Urut"/>
+                    <EditText
+                        android:id="@+id/nomor_kandidat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="1"/>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/backgroud_putih">
+                <ImageView
+                    android:id="@+id/iconfoto"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/file_image"/>
+                <LinearLayout
+                    android:layout_marginVertical="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp"
+                    android:layout_toEndOf="@id/iconfoto">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Foto"/>
+                    <TextView
+                        android:id="@+id/foto_kandidat"
+                        android:inputType="text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Pilih foto"/>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/backgroud_putih">
+                <ImageView
+                    android:id="@+id/iconvisi"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/hashtag"/>
+                <LinearLayout
+                    android:layout_marginVertical="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp"
+                    android:layout_toEndOf="@id/iconvisi">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/visi"/>
+
+                    <EditText
+                        android:id="@+id/visi_kandidat"
+                        android:inputType="text|textMultiLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/visi_kandidat"/>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="10dp"
+                android:translationZ="2dp"
+                android:outlineProvider="paddedBounds"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/shape_bottom_radius_white">
+                <ImageView
+                    android:id="@+id/iconmisi"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/location_arrow"/>
+                <LinearLayout
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp"
+                    android:layout_toEndOf="@id/iconmisi">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/misi_title"/>
+
+                    <EditText
+                        android:id="@+id/misi_kandidat"
+                        android:inputType="text|textMultiLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/misi_kandidat_hint"/>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="30dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/batal"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="0dp"
+                    android:layout_weight="1"/>
+                <Button
+                    android:id="@+id/button_simpan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="40dp"
+                    android:paddingLeft="40dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/shape_radius_green"
+                    android:text="@string/tambah_button"
+                    android:textSize="16sp"
+                    android:textColor="@color/backgroud_putih"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
 
         </LinearLayout>
 
-    </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>
