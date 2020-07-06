@@ -1,9 +1,272 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
     tools:context=".RegisterActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/login_ilus"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="-240dp"/>
+
+    <TextView
+        android:id="@+id/login_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:textColor="@color/backgroud_putih"
+        android:textStyle="bold"
+        android:textSize="50sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="70dp"
+        android:layout_alignParentTop="true"/>
+
+    <RelativeLayout
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_top_radius_white"
+        android:padding="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="0.1dp"
+        android:layout_below="@id/login_text">
+        <ImageView
+            android:id="@+id/email_icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="8dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/email"/>
+        <TextView
+            android:id="@+id/name_email"
+            android:layout_marginLeft="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/email_icon"
+            android:text="EMAIL"/>
+        <EditText
+            android:layout_marginLeft="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name_email"
+            android:layout_toRightOf="@id/email_icon"
+            android:hint="youremail@gmail.com"
+            android:background="@android:color/transparent"/>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/password"
+        android:elevation="10dp"
+        android:translationZ="2dp"
+        android:outlineProvider="paddedBounds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroud_putih"
+        android:padding="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="0.1dp"
+        android:layout_below="@id/email">
+        <ImageView
+            android:id="@+id/password_icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="8dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/password"/>
+        <TextView
+            android:id="@+id/name_password"
+            android:layout_marginLeft="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/password_icon"
+            android:text="PASSWORD"/>
+        <EditText
+            android:layout_marginLeft="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name_password"
+            android:layout_toRightOf="@id/password_icon"
+            android:inputType="textPassword"
+            android:hint="****************"
+            android:background="@android:color/transparent"/>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroud_putih"
+        android:padding="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="0.1dp"
+        android:layout_below="@id/password">
+        <ImageView
+            android:id="@+id/nama_icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="8dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/user_graduate"/>
+        <TextView
+            android:id="@+id/name_nama"
+            android:layout_marginLeft="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/nama_icon"
+            android:text="NAMA"/>
+        <EditText
+            android:layout_marginLeft="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name_nama"
+            android:layout_toRightOf="@id/nama_icon"
+            android:hint="your name"
+            android:background="@android:color/transparent"/>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/kelas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroud_putih"
+        android:padding="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="0.1dp"
+        android:layout_below="@id/nama">
+        <ImageView
+            android:id="@+id/kelas_icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="8dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/material_class"/>
+        <TextView
+            android:id="@+id/name_kelas"
+            android:layout_marginLeft="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/kelas_icon"
+            android:text="KELAS"/>
+        <EditText
+            android:layout_marginLeft="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name_kelas"
+            android:layout_toRightOf="@id/kelas_icon"
+            android:hint="XII Jurusan 5"
+            android:background="@android:color/transparent"/>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/nisn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroud_putih"
+        android:padding="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="0.1dp"
+        android:layout_below="@id/kelas">
+        <ImageView
+            android:id="@+id/nisn_icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="8dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/date_range"/>
+        <TextView
+            android:id="@+id/name_nisn"
+            android:layout_marginLeft="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/nisn_icon"
+            android:text="TEMPAT, TANGGAL LAHIR"/>
+        <EditText
+            android:layout_marginLeft="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name_nisn"
+            android:layout_toRightOf="@id/nisn_icon"
+            android:hint="Place, dd-mm-yyyy"
+            android:background="@android:color/transparent"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/ttl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_bottom_radius_white"
+        android:padding="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="0.1dp"
+        android:layout_below="@id/nisn">
+        <ImageView
+            android:id="@+id/ttl_icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="8dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/card_ungu"
+            android:tint="#727C8E"/>
+        <TextView
+            android:id="@+id/name_ttl"
+            android:layout_marginLeft="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ttl_icon"
+            android:text="NISN"/>
+        <EditText
+            android:layout_marginLeft="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name_ttl"
+            android:layout_toRightOf="@id/ttl_icon"
+            android:hint="902897883"
+            android:background="@android:color/transparent"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/button_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ttl"
+        android:background="@drawable/shape_radius_red"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="12dp"
+        android:padding="8dp"
+        android:layout_marginTop="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SIGN UP"
+            android:textColor="@color/backgroud_putih"
+            android:textStyle="bold"
+            android:textSize="24dp"
+            android:layout_centerInParent="true"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:src="@drawable/next"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+</RelativeLayout>
