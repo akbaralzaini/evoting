@@ -148,6 +148,7 @@
         android:text="Daftar Disini"
         android:textColor="@color/main_hijau"
         android:textSize="17sp"
+        android:textStyle="bold"
         android:layout_below="@id/text_daftar"
         android:layout_centerHorizontal="true"/>
 

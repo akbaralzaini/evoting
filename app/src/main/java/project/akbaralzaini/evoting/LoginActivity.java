@@ -5,10 +5,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
-public class LoginActivity extends Activity {
+public class LoginActivity extends Activity implements View.OnClickListener {
 
     RelativeLayout buttonLogin;
+    TextView btnRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,14 +19,20 @@ public class LoginActivity extends Activity {
 
         buttonLogin = findViewById(R.id.button_login);
 
-        buttonLogin.setOnClickListener(new View.OnClickListener() {
+        buttonLogin.setOnClickListener(this);
+    }
 
-            public void onClick(View v) {
-
-                Intent nextScreen = new Intent(getApplicationContext(), DashboardActivity.class);
-                startActivity(nextScreen);
-
-            }
-        });
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.button_login:
+                Intent b = new Intent(LoginActivity.this, DashboardActivity.class);
+                startActivity(b);
+                break;
+            case R.id.button_daftar:
+                Intent c = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(c);
+                break;
+        }
     }
 }
