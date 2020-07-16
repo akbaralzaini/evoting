@@ -88,10 +88,11 @@
             android:layout_below="@id/hairline"
             android:layout_centerHorizontal="true"/>
 
-        <ListView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/list_kandidat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:scrollbars="vertical"
             android:background="@android:color/transparent"
             android:layout_below="@id/des_daftar_kandidat"/>
 

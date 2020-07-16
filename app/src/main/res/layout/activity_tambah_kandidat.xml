@@ -45,14 +45,15 @@
 
     <ScrollView
         android:layout_below="@id/topnavbar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingBottom="30dp">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
 
         <LinearLayout
             android:layout_marginTop="18dp"
             android:layout_marginEnd="12dp"
             android:layout_marginStart="12dp"
+            android:paddingBottom="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -125,6 +126,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/kelas"/>
                     <EditText
+                        android:textSize="14sp"
                         android:id="@+id/kelas_kandidat"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -162,13 +164,14 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Tempat, Tanggal Lahir"/>
+                        android:text="Tanggal Lahir"/>
                     <EditText
+                        android:textSize="14sp"
                         android:id="@+id/ttl_kandidat"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
-                        android:hint="place, hh mm yyyy"/>
+                        android:hint="hh mm yyyy"/>
 
                 </LinearLayout>
 
@@ -203,6 +206,7 @@
                         android:layout_height="wrap_content"
                         android:text="Nomor Urut"/>
                     <EditText
+                        android:textSize="14sp"
                         android:id="@+id/nomor_kandidat"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -242,6 +246,7 @@
                         android:layout_height="wrap_content"
                         android:text="Foto"/>
                     <TextView
+                        android:textSize="14sp"
                         android:id="@+id/foto_kandidat"
                         android:inputType="text"
                         android:layout_width="match_parent"
@@ -283,6 +288,7 @@
                         android:text="@string/visi"/>
 
                     <EditText
+                        android:textSize="14sp"
                         android:id="@+id/visi_kandidat"
                         android:inputType="text|textMultiLine"
                         android:layout_width="match_parent"
@@ -306,7 +312,7 @@
                 android:paddingStart="12dp"
                 android:paddingEnd="12dp"
                 android:layout_marginTop="1dp"
-                android:background="@drawable/shape_bottom_radius_white">
+                android:background="@color/backgroud_putih">
                 <ImageView
                     android:id="@+id/iconmisi"
                     android:layout_width="20dp"
@@ -328,6 +334,7 @@
                         android:text="@string/misi_title"/>
 
                     <EditText
+                        android:textSize="14sp"
                         android:id="@+id/misi_kandidat"
                         android:inputType="text|textMultiLine"
                         android:layout_width="match_parent"
@@ -339,7 +346,52 @@
 
 
             </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="10dp"
+                android:translationZ="2dp"
+                android:outlineProvider="paddedBounds"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/shape_bottom_radius_white">
+                <ImageView
+                    android:id="@+id/iconpengalaman"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:tint="#3E4553"
+                    android:src="@drawable/ic_pengalaman"/>
+                <LinearLayout
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp"
+                    android:layout_toEndOf="@id/iconpengalaman">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pengalaman"/>
 
+                    <EditText
+                        android:textSize="14sp"
+                        android:id="@+id/pengalaman_kandidat"
+                        android:inputType="text|textMultiLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Pengalaman kandidat"/>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

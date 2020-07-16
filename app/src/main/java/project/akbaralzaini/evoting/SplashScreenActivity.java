@@ -9,7 +9,7 @@ import android.os.Handler;
 
 public class SplashScreenActivity extends Activity {
 
-    private int waktu_loading=4000;
+    private int waktu_loading=2000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
