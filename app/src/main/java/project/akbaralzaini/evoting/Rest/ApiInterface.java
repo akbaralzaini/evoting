@@ -19,11 +19,11 @@ public interface ApiInterface {
     @FormUrlEncoded
     @POST("kandidat/create")
     Call<PostUpdateDelKandidat> postKandidat(    @Field("nama") String nama,
+                                                 @Field("kelas") String kelas,
                                                  @Field("nis") String nis,
                                                  @Field("visi") String visi,
                                                  @Field("misi") String misi,
                                                  @Field("tanggal_lahir") String tanggal_lahir,
-                                                 @Field("kelas") String kelas,
                                                  @Field("pengalaman") String pelngalaman,
                                                  @Field("foto") int foto);
     @FormUrlEncoded

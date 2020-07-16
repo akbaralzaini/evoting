@@ -55,7 +55,7 @@ public class DashboardActivity extends Activity implements View.OnClickListener 
 
     }
 
-    private void refresh() {
+    public void refresh() {
         Call<List<Kandidat>> kandidatCall = mApiInterface.getKandidat();
         kandidatCall.enqueue(new Callback<List<Kandidat>>() {
             @Override
