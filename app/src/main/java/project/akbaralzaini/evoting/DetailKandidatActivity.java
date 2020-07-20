@@ -39,8 +39,17 @@ public class DetailKandidatActivity extends Activity {
 
             public void onClick(View v) {
 
-                Intent nextScreen = new Intent(getApplicationContext(), EditKandidatActivity.class);
-                startActivity(nextScreen);
+                Intent i = new Intent(getApplicationContext(), EditKandidatActivity.class);
+                i.putExtra("id",mIntent.getStringExtra("id"));
+                i.putExtra("nama",mIntent.getStringExtra("nama"));
+                i.putExtra("kelas",mIntent.getStringExtra("kelas"));
+                i.putExtra("nis",mIntent.getStringExtra("nis"));
+                i.putExtra("visi",mIntent.getStringExtra("visi"));
+                i.putExtra("misi",mIntent.getStringExtra("misi"));
+                i.putExtra("tanggal_lahir",mIntent.getStringExtra("tanggal_lahir"));
+                i.putExtra("pengalaman",mIntent.getStringExtra("pengalaman"));
+                i.putExtra("foto",mIntent.getStringExtra("foto"));
+                startActivity(i);
 
             }
         });

@@ -5,7 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -49,14 +52,33 @@ public class TambahKandidatActivity extends Activity {
             postUpdateDelKandidatCall.enqueue(new Callback<PostUpdateDelKandidat>() {
                 @Override
                 public void onResponse(Call<PostUpdateDelKandidat> call, Response<PostUpdateDelKandidat> response) {
-                    Toast.makeText(getApplicationContext(), "Berhasil Ditambahkan",Toast.LENGTH_LONG).show();
-                    DashboardActivity.ma.refresh();
-                    finish();
+                    //Toast.makeText(getApplicationContext(), "Berhasil Ditambahkan",Toast.LENGTH_LONG).show();
+                    AlertDialog.Builder builder = new AlertDialog.Builder(TambahKandidatActivity.this);
+                    builder.setTitle("Informasi");
+                    builder.setMessage("Data Berhasil ditambahkan");
+                    builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            DashboardActivity.ma.refresh();
+                            finish();
+                        }
+                    });
+                    builder.show();
                 }
 
                 @Override
                 public void onFailure(Call<PostUpdateDelKandidat> call, Throwable t) {
-                    Toast.makeText(TambahKandidatActivity.this, "Error",Toast.LENGTH_LONG).show();
+                    AlertDialog.Builder builder = new AlertDialog.Builder(TambahKandidatActivity.this);
+                    builder.setTitle("Informasi");
+                    builder.setMessage("Data Gagal ditambahkan");
+                    builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            Log.e("Gagal","Gagal Menambahkan");
+                        }
+                    });
+                    builder.show();
+                    //Toast.makeText(TambahKandidatActivity.this, "Error",Toast.LENGTH_LONG).show();
                 }
             });
         });

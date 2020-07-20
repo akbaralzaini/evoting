@@ -1,15 +1,9 @@
 package project.akbaralzaini.evoting.adapter;
 
-import project.akbaralzaini.evoting.DashboardActivity;
-import project.akbaralzaini.evoting.DetailKandidatActivity;
-import project.akbaralzaini.evoting.R;
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,7 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-import project.akbaralzaini.evoting.model.GetKandidat;
+import project.akbaralzaini.evoting.DetailKandidatActivity;
+import project.akbaralzaini.evoting.R;
 import project.akbaralzaini.evoting.model.Kandidat;
 
 public class KandidatAdapter extends RecyclerView.Adapter<KandidatAdapter.MyViewHolder> {

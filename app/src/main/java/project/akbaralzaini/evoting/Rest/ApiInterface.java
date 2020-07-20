@@ -2,7 +2,6 @@ package project.akbaralzaini.evoting.Rest;
 
 import java.util.List;
 
-import project.akbaralzaini.evoting.model.GetKandidat;
 import project.akbaralzaini.evoting.model.Kandidat;
 import project.akbaralzaini.evoting.model.PostUpdateDelKandidat;
 import retrofit2.Call;
@@ -17,7 +16,7 @@ public interface ApiInterface {
     @GET("kandidat")
     Call<List<Kandidat>> getKandidat();
     @FormUrlEncoded
-    @POST("kandidat/create")
+    @POST("kandidat/post")
     Call<PostUpdateDelKandidat> postKandidat(    @Field("nama") String nama,
                                                  @Field("kelas") String kelas,
                                                  @Field("nis") String nis,
