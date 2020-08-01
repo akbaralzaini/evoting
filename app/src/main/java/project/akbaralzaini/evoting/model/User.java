@@ -16,6 +16,13 @@ public class User {
     @SerializedName("update_at")
     private String update_at;
 
+    public User(String nama,String username, String password, String role){
+        this.username = username;
+        this.nama = nama;
+        this.password = password;
+        this.role = role;
+    }
+
     public String getUsername() {
         return username;
     }

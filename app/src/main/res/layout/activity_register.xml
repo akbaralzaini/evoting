@@ -51,23 +51,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/email_icon"
-            android:text="EMAIL"/>
+            android:text="USERNAME"/>
+
         <EditText
-            android:layout_marginLeft="12dp"
+            android:id="@+id/username_user"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/name_email"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="-1dp"
             android:layout_toRightOf="@id/email_icon"
-            android:hint="youremail@gmail.com"
-            android:background="@android:color/transparent"/>
+            android:background="@android:color/transparent"
+            android:hint="your username"
+            android:textSize="14sp" />
 
 
     </RelativeLayout>
     <RelativeLayout
         android:id="@+id/password"
-        android:elevation="10dp"
-        android:translationZ="2dp"
-        android:outlineProvider="paddedBounds"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/backgroud_putih"
@@ -91,7 +92,9 @@
             android:layout_toRightOf="@id/password_icon"
             android:text="PASSWORD"/>
         <EditText
+            android:id="@+id/password_user"
             android:layout_marginLeft="12dp"
+            android:textSize="14sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/name_password"
@@ -106,7 +109,7 @@
         android:id="@+id/nama"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/backgroud_putih"
+        android:background="@drawable/shape_bottom_radius_white"
         android:padding="12dp"
         android:layout_marginStart="12dp"
         android:layout_marginEnd="12dp"
@@ -127,6 +130,8 @@
             android:layout_toRightOf="@id/nama_icon"
             android:text="NAMA"/>
         <EditText
+            android:id="@+id/nama_user"
+            android:textSize="14sp"
             android:layout_marginLeft="12dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -137,116 +142,13 @@
 
 
     </RelativeLayout>
-    <RelativeLayout
-        android:id="@+id/kelas"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/backgroud_putih"
-        android:padding="12dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="0.1dp"
-        android:layout_below="@id/nama">
-        <ImageView
-            android:id="@+id/kelas_icon"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginLeft="8dp"
-            android:layout_centerVertical="true"
-            android:src="@drawable/material_class"/>
-        <TextView
-            android:id="@+id/name_kelas"
-            android:layout_marginLeft="12dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/kelas_icon"
-            android:text="KELAS"/>
-        <EditText
-            android:layout_marginLeft="12dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/name_kelas"
-            android:layout_toRightOf="@id/kelas_icon"
-            android:hint="XII Jurusan 5"
-            android:background="@android:color/transparent"/>
 
-
-    </RelativeLayout>
-    <RelativeLayout
-        android:id="@+id/nisn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/backgroud_putih"
-        android:padding="12dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="0.1dp"
-        android:layout_below="@id/kelas">
-        <ImageView
-            android:id="@+id/nisn_icon"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginLeft="8dp"
-            android:layout_centerVertical="true"
-            android:src="@drawable/date_range"/>
-        <TextView
-            android:id="@+id/name_nisn"
-            android:layout_marginLeft="12dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/nisn_icon"
-            android:text="TEMPAT, TANGGAL LAHIR"/>
-        <EditText
-            android:layout_marginLeft="12dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/name_nisn"
-            android:layout_toRightOf="@id/nisn_icon"
-            android:hint="Place, dd-mm-yyyy"
-            android:background="@android:color/transparent"/>
-    </RelativeLayout>
-    <RelativeLayout
-        android:id="@+id/ttl"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/shape_bottom_radius_white"
-        android:padding="12dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="0.1dp"
-        android:layout_below="@id/nisn">
-        <ImageView
-            android:id="@+id/ttl_icon"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginLeft="8dp"
-            android:layout_centerVertical="true"
-            android:src="@drawable/card_ungu"
-            android:tint="#727C8E"/>
-        <TextView
-            android:id="@+id/name_ttl"
-            android:layout_marginLeft="12dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/ttl_icon"
-            android:text="NISN"/>
-        <EditText
-            android:layout_marginLeft="12dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/name_ttl"
-            android:layout_toRightOf="@id/ttl_icon"
-            android:hint="902897883"
-            android:background="@android:color/transparent"/>
-
-
-    </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/button_signup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/ttl"
+        android:layout_below="@id/nama"
         android:background="@drawable/shape_radius_red"
         android:layout_marginEnd="12dp"
         android:layout_marginStart="12dp"

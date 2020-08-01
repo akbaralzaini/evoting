@@ -27,14 +27,14 @@ public interface ApiInterface {
                                                  @Field("foto") int foto);
     @FormUrlEncoded
     //TODO : dokumentasi put belum ada
-    @PUT("kandidat")
+    @PUT("kandidat/put")
     Call<PostUpdateDelKandidat> putKandidat(    @Field("id") String id,
                                                 @Field("nama") String nama,
+                                                @Field("kelas") String kelas,
                                                 @Field("nis") String nis,
                                                 @Field("visi") String visi,
                                                 @Field("misi") String misi,
                                                 @Field("tanggal_lahir") String tanggal_lahir,
-                                                @Field("kelas") String kelas,
                                                 @Field("pengalaman") String pelngalaman,
                                                 @Field("foto") int foto);
     @FormUrlEncoded

@@ -49,11 +49,11 @@ public class EditKandidatActivity extends Activity {
         btnSimpan = findViewById(R.id.button_simpan);
 
         btnSimpan.setOnClickListener(view -> {
-            Call<PostUpdateDelKandidat> postUpdateDelKandidatCall = mApiInterface.putKandidat(mId,mNama.getText().toString(),mKelas.getText().toString(),mNis.getText().toString(),mVisi.getText().toString(),mMisi.getText().toString(),mTanggalLahir.getText().toString(),mPengalaman.getText().toString(),1);
+            //Log.i("TES",mIntent.getStringExtra("id"));
+            Call<PostUpdateDelKandidat> postUpdateDelKandidatCall = mApiInterface.putKandidat(mIntent.getStringExtra("id"),mNama.getText().toString(),mKelas.getText().toString(),mNis.getText().toString(),mVisi.getText().toString(),mMisi.getText().toString(),mTanggalLahir.getText().toString(),mPengalaman.getText().toString(),1);
             postUpdateDelKandidatCall.enqueue(new Callback<PostUpdateDelKandidat>() {
                 @Override
                 public void onResponse(Call<PostUpdateDelKandidat> call, Response<PostUpdateDelKandidat> response) {
-                    //Toast.makeText(getApplicationContext(), "Berhasil Ditambahkan",Toast.LENGTH_LONG).show();
                     AlertDialog.Builder builder = new AlertDialog.Builder(EditKandidatActivity.this);
                     builder.setTitle("Informasi");
                     builder.setMessage("Data Berhasil ditambahkan");

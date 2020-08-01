@@ -51,8 +51,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/email_icon"
-            android:text="EMAIL"/>
+            android:text="Username"/>
         <EditText
+            android:id="@+id/username_login"
             android:layout_marginLeft="12dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -89,8 +90,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/password_icon"
-            android:text="PASSWORD"/>
+            android:text="Password"/>
         <EditText
+            android:id="@+id/password_login"
             android:layout_marginLeft="12dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
