@@ -28,6 +28,6 @@ public interface ApiUserInterface {
                                      @Field("create_at") String create_at,
                                      @Field("update_at") String update_at);
 
-    @GET("login/")
+    @POST("login/")
     Call<User> loginRequest(@Body User user);
 }

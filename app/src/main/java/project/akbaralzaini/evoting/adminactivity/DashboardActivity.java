@@ -1,4 +1,4 @@
-package project.akbaralzaini.evoting;
+package project.akbaralzaini.evoting.adminactivity;
 
 
 import android.app.Activity;
@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import project.akbaralzaini.evoting.R;
 import project.akbaralzaini.evoting.Rest.ApiClient;
 import project.akbaralzaini.evoting.Rest.ApiInterface;
 import project.akbaralzaini.evoting.adapter.KandidatAdapter;

@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-import project.akbaralzaini.evoting.DetailKandidatActivity;
+import project.akbaralzaini.evoting.adminactivity.DetailKandidatActivity;
 import project.akbaralzaini.evoting.R;
 import project.akbaralzaini.evoting.model.Kandidat;
 

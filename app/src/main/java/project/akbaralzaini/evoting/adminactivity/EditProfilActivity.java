@@ -1,9 +1,10 @@
-package project.akbaralzaini.evoting;
+package project.akbaralzaini.evoting.adminactivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.os.Bundle;
+import project.akbaralzaini.evoting.R;
 
 public class EditProfilActivity extends Activity {
 

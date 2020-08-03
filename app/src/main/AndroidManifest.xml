@@ -11,12 +11,12 @@
         android:networkSecurityConfig="@xml/network_security_config"
         android:theme="@style/AppTheme">
         <activity android:name=".RegisterActivity"></activity>
-        <activity android:name=".EditProfilActivity" />
-        <activity android:name=".ProfilActivity" />
-        <activity android:name=".TambahKandidatActivity" />
-        <activity android:name=".EditKandidatActivity" />
-        <activity android:name=".DetailKandidatActivity" />
-        <activity android:name=".DashboardActivity" />
+        <activity android:name=".adminactivity.EditProfilActivity" />
+        <activity android:name=".adminactivity.ProfilActivity" />
+        <activity android:name=".adminactivity.TambahKandidatActivity" />
+        <activity android:name=".adminactivity.EditKandidatActivity" />
+        <activity android:name=".adminactivity.DetailKandidatActivity" />
+        <activity android:name=".adminactivity.DashboardActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".SplashScreenActivity">
             <intent-filter>
