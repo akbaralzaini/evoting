@@ -20,11 +20,9 @@ public class Kandidat {
     @SerializedName("kelas")
     private String kelas;
     @SerializedName("pengalaman")
-    private String pelngalaman;
+    private String pengalaman;
     @SerializedName("foto")
     private String foto;
-    @SerializedName("hasil_vote")
-    private int hasil_vote;
 
     public String getId() {
         return id;
@@ -82,13 +80,6 @@ public class Kandidat {
         this.kelas = kelas;
     }
 
-    public String getPelngalaman() {
-        return pelngalaman;
-    }
-
-    public void setPelngalaman(String pelngalaman) {
-        this.pelngalaman = pelngalaman;
-    }
 
     public String getFoto() {
         return foto;
@@ -98,11 +89,11 @@ public class Kandidat {
         this.foto = foto;
     }
 
-    public int getHasil_vote() {
-        return hasil_vote;
+    public String getPengalaman() {
+        return pengalaman;
     }
 
-    public void setHasil_vote(int hasil_vote) {
-        this.hasil_vote = hasil_vote;
+    public void setPengalaman(String pengalaman) {
+        this.pengalaman = pengalaman;
     }
 }

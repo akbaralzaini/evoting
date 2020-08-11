@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="12dp"
+        android:background="@drawable/shape_radius_white"
+        android:elevation="10dp"
+        android:orientation="vertical"
+        android:outlineProvider="paddedBounds"
+        android:padding="8dp"
+        android:translationZ="2dp">
+
+        <LinearLayout
+            android:id="@+id/foto_calon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/photo_kandidat"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginEnd="12dp">
+
+                <ImageView
+                    android:id="@+id/gambar_ketua"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="6dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/akbaralzaini" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/profilframe" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/photo_wakil"
+                android:layout_width="80dp"
+                android:layout_height="80dp">
+
+                <ImageView
+                    android:id="@+id/gambar_wakil"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="6dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/akbaralzaini" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/profilframe" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/foto_calon"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nama_kandidat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Akbar Al Zaini &amp; Sultan Mohhamad" />
+
+            <TextView
+                android:id="@+id/nomor_urut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nomor Urut 2"
+                android:textColor="@color/backgroud_merah"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/edit_pasangan_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/shape_radius_green"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="2dp"
+                android:text="Detail Pasangan"
+                android:textColor="@color/backgroud_putih"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

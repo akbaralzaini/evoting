@@ -52,7 +52,11 @@ public class RegisterActivity extends Activity implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.button_signup:
-                User u = new User(edtNama.getText().toString(),edtUsername.getText().toString(),edtPassword.getText().toString(),"siswa");
+                User u = new User();
+                u.setUsername(edtUsername.getText().toString());
+                u.setNama(edtNama.getText().toString());
+                u.setPassword(edtPassword.getText().toString());
+                u.setRole("siswa");
                 Call<User> postUpdateDelUserCall = mApiInterface.postUser(u);
                 postUpdateDelUserCall.enqueue(new Callback<User>() {
                     @Override

@@ -1,7 +1,10 @@
 package project.akbaralzaini.evoting.Rest;
 
+import android.util.Log;
+
 import java.util.List;
 
+import project.akbaralzaini.evoting.model.Login;
 import project.akbaralzaini.evoting.model.PostUpdateDelUser;
 import project.akbaralzaini.evoting.model.User;
 import retrofit2.Call;
@@ -16,8 +19,10 @@ import retrofit2.http.PUT;
 public interface ApiUserInterface {
     @GET("User/")
     Call<List<User>> getUser();
+
     @POST("User/create")
     Call<User> postUser(@Body User user);
+
     @FormUrlEncoded
     @PUT("user/put/{id}")
     Call<PostUpdateDelUser> putUser( @Field("id") String id,
@@ -28,6 +33,7 @@ public interface ApiUserInterface {
                                      @Field("create_at") String create_at,
                                      @Field("update_at") String update_at);
 
-    @POST("login/")
-    Call<User> loginRequest(@Body User user);
+
+    @POST("Authentication/login")
+    Call<User> loginRequest(@Body Login login);
 }

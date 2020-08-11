@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_agakpputih"
-    tools:context=".adminactivity.DetailKandidatActivity">
+    tools:context=".adminactivity.DetailPasanganAdminActivity">
 
     <RelativeLayout
         android:id="@+id/topnavbar"
@@ -16,6 +16,7 @@
         android:paddingHorizontal="8dp"
         android:background="@drawable/shape_radius_bottom_ungu">
         <TextView
+            android:id="@+id/nomor_urut"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Kandidat 1"
@@ -52,82 +53,93 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
             <RelativeLayout
-                android:id="@+id/datakandidat"
+                android:id="@+id/dataketua"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <FrameLayout
-                    android:id="@+id/photo_kandidat"
+                    android:id="@+id/photo_ketua"
                     android:layout_width="100dp"
                     android:layout_height="100dp">
 
                     <ImageView
-                        android:id="@+id/gambar_kandidat"
+                        android:id="@+id/gambar_ketua"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:padding="6dp"
-                        android:src="@drawable/akbaralzaini" />
+                        android:padding="6dp" />
 
                     <ImageView
-                        android:src="@drawable/profilframe"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
+                        android:layout_height="match_parent"
+                        android:src="@drawable/profilframe" />
                 </FrameLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:layout_toRightOf="@id/photo_kandidat"
+                    android:layout_toRightOf="@id/photo_ketua"
                     android:orientation="vertical">
                     <TextView
-                        android:id="@+id/nama_kandidat"
+                        android:id="@+id/nama_ketua"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Akbar Al Zaini"
-                        android:layout_toRightOf="@id/photo_kandidat"
+                        android:text="Nama Ketua"
                         android:textStyle="bold"
                         android:textSize="22dp"/>
                     <TextView
-                        android:id="@+id/kelas_kandidat"
+                        android:id="@+id/kelas_ketua"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="XII MIPA 7"
                         android:textColor="@color/backgroud_merah"/>
-                    <LinearLayout
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/data_wakil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:id="@+id/photo_wakil"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+
+                    <ImageView
+                        android:id="@+id/gambar_wakil"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:padding="6dp" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/profilframe" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_toRightOf="@id/photo_wakil"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/nama_wakil"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-                        <ImageView
-                            android:layout_width="15dp"
-                            android:layout_height="match_parent"
-                            android:padding="2dp"
-                            android:src="@drawable/date_range"/>
-                        <TextView
-                            android:id="@+id/tanggal_lahir_kandidat"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Lahat, 11 Maret 1999"
-                            android:layout_marginStart="12dp"/>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_marginTop="2dp"
+                        android:text="Nama wakil"
+                        android:layout_toRightOf="@id/photo_kandidat"
+                        android:textStyle="bold"
+                        android:textSize="22dp"/>
+                    <TextView
+                        android:id="@+id/kelas_wakil"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-                        <ImageView
-                            android:layout_width="15dp"
-                            android:layout_height="match_parent"
-                            android:padding="2dp"
-                            android:src="@drawable/map_marker"/>
-                        <TextView
-                            android:id="@+id/nomor_urut_kandidat"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Kandidat No 2"
-                            android:layout_marginStart="12dp"/>
-                    </LinearLayout>
+                        android:text="XII MIPA 7"
+                        android:textColor="@color/backgroud_merah"/>
+
                 </LinearLayout>
             </RelativeLayout>
 
@@ -160,7 +172,7 @@
                     android:id="@+id/visi_kandidat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil deleniti error neque quod sapiente optio voluptatem magni voluptas illum illo nobis accusantium laboriosam facere ducimus ipsa, voluptate impedit assumenda nulla"
+
                     android:layout_below="@id/tite_visi"/>
 
 
@@ -195,7 +207,7 @@
                     android:id="@+id/misi_kandidat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil deleniti error neque quod sapiente optio voluptatem magni voluptas illum illo nobis accusantium laboriosam facere ducimus ipsa, voluptate impedit assumenda nulla"
+
                     android:layout_below="@id/tite_misi"/>
 
 
@@ -222,37 +234,80 @@
                     android:id="@+id/tite_pengalaman"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="PENGALAMAN"
+                    android:text="PENGALAMAN KETUA"
                     android:textStyle="bold"
                     android:textSize="24dp"
                     android:textColor="@color/colorPrimaryDark"/>
                 <TextView
-                    android:id="@+id/pengalaman_kandidat"
+                    android:id="@+id/pengalaman_ketua"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil deleniti error neque quod sapiente optio voluptatem magni voluptas illum illo nobis accusantium laboriosam facere ducimus ipsa, voluptate impedit assumenda nulla"
+
                     android:layout_below="@id/tite_pengalaman"/>
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginTop="18dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="12dp"
+                android:elevation="10dp"
+                android:translationZ="2dp"
+                android:outlineProvider="paddedBounds"
+                android:background="@drawable/shape_radius_white">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PENGALAMAN"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    android:textColor="#2A5E5E5E"/>
+                <TextView
+                    android:id="@+id/tite_pengalamanw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PENGALAMAN KETUA"
+                    android:textStyle="bold"
+                    android:textSize="24dp"
+                    android:textColor="@color/colorPrimaryDark"/>
+                <TextView
+                    android:id="@+id/pengalaman_wakil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tite_pengalamanw"/>
 
 
             </RelativeLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-            </LinearLayout>
-            <Button
-                android:id="@+id/button_edit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="40dp"
-                android:layout_gravity="center"
                 android:layout_marginTop="24dp"
-                android:background="@drawable/shape_radius_green"
-                android:text="Edit"
-                android:textSize="16dp"
-                android:textColor="@color/backgroud_putih"
-                android:textStyle="bold"/>
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/button_hapus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/backgroud_merah"
+                    android:layout_marginStart="12dp"
+                    android:text="HAPUS"/>
+                <Button
+                    android:layout_weight="1"
+                    android:id="@+id/button_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="40dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/shape_radius_green"
+                    android:text="Edit"
+                    android:textSize="16dp"
+                    android:textColor="@color/backgroud_putih"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 

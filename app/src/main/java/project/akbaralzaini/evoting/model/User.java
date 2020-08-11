@@ -3,6 +3,8 @@ package project.akbaralzaini.evoting.model;
 import com.google.gson.annotations.SerializedName;
 
 public class User {
+    @SerializedName("id")
+    private String id;
     @SerializedName("username")
     private String username;
     @SerializedName("nama")
@@ -16,12 +18,6 @@ public class User {
     @SerializedName("update_at")
     private String update_at;
 
-    public User(String nama,String username, String password, String role){
-        this.username = username;
-        this.nama = nama;
-        this.password = password;
-        this.role = role;
-    }
 
     public String getUsername() {
         return username;
@@ -69,5 +65,13 @@ public class User {
 
     public void setUpdate_at(String update_at) {
         this.update_at = update_at;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

@@ -17,21 +17,29 @@ import java.util.List;
 import project.akbaralzaini.evoting.R;
 import project.akbaralzaini.evoting.Rest.ApiClient;
 import project.akbaralzaini.evoting.Rest.ApiInterface;
+import project.akbaralzaini.evoting.Rest.ApiPasanganInterface;
 import project.akbaralzaini.evoting.adapter.KandidatAdapter;
+import project.akbaralzaini.evoting.adapter.PasanganAdapter;
 import project.akbaralzaini.evoting.model.Kandidat;
+import project.akbaralzaini.evoting.model.Pasangan;
+import project.akbaralzaini.evoting.model.PasanganLkp;
+import project.akbaralzaini.evoting.util.SharedPrefManager;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class DashboardActivity extends Activity implements View.OnClickListener {
 
-    RelativeLayout ButtonTambah;
+    RelativeLayout ButtonTambah, rButtonTambahPasangan;
     TextView ButtonProfil;
+    TextView tInternetHilang;
     TextView namaProfil;
     ApiInterface mApiInterface;
-    private RecyclerView mRecyclerView;
-    private RecyclerView.Adapter mAdapter;
-    private RecyclerView.LayoutManager mLayoutManager;
+    SharedPrefManager sharedPrefManager;
+    ApiPasanganInterface mApiPasanganInterface;
+    private RecyclerView mRecyclerView,mRecyclerViewPasangan;
+    private RecyclerView.Adapter mAdapter,mPasanganAdapter;
+    private RecyclerView.LayoutManager mLayoutManager,mLayoutManagerpasangan;
     public static DashboardActivity ma;
 
     @Override
@@ -40,17 +48,27 @@ public class DashboardActivity extends Activity implements View.OnClickListener 
         setContentView(R.layout.activity_admin);
 
         ButtonTambah = findViewById(R.id.button_tambahkandidat);
-        ButtonProfil = findViewById(R.id.edit_button);
+        rButtonTambahPasangan = findViewById(R.id.button_tambahpasangan);
         namaProfil = findViewById(R.id.nama_profil);
+        tInternetHilang = findViewById(R.id.internet_hilang);
 
-        namaProfil.setText("Akbar Alzaini");
+        sharedPrefManager = new SharedPrefManager(this);
+        namaProfil.setText(sharedPrefManager.getSPNama());
+
         ButtonTambah.setOnClickListener(this);
-        ButtonProfil.setOnClickListener(this);
+        rButtonTambahPasangan.setOnClickListener(this);
 
-        mRecyclerView = (RecyclerView) findViewById(R.id.list_kandidat);
-        mLayoutManager = new LinearLayoutManager(this);
+
+        //pemanggilan Recycleview untuk list
+        mRecyclerView = findViewById(R.id.list_kandidat);
+        mLayoutManager = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL, false);
         mRecyclerView.setLayoutManager(mLayoutManager);
         mApiInterface = ApiClient.getClient().create(ApiInterface.class);
+
+        mRecyclerViewPasangan = findViewById(R.id.list_pasangan);
+        mLayoutManagerpasangan = new LinearLayoutManager(this);
+        mRecyclerViewPasangan.setLayoutManager(mLayoutManagerpasangan);
+        mApiPasanganInterface =ApiClient.getClient().create(ApiPasanganInterface.class);
         ma=this;
         refresh();
 
@@ -62,15 +80,28 @@ public class DashboardActivity extends Activity implements View.OnClickListener 
             @Override
             public void onResponse(Call<List<Kandidat>> call, Response<List<Kandidat>> response) {
                 List<Kandidat> KandidatList = response.body();
-                Log.d("Retrofit Get", "Jumlah data Kontak: " +
-                        KandidatList.size());
                 mAdapter = new KandidatAdapter(KandidatList);
                 mRecyclerView.setAdapter(mAdapter);
             }
 
             @Override
             public void onFailure(Call<List<Kandidat>> call, Throwable t) {
-                Log.e("Retrofit Get", t.toString());
+                tInternetHilang.setVisibility(View.VISIBLE);
+            }
+        });
+
+        Call<List<PasanganLkp>> pasanganCall = mApiPasanganInterface.getPasanganLengkap();
+        pasanganCall.enqueue(new Callback<List<PasanganLkp>>() {
+            @Override
+            public void onResponse(Call<List<PasanganLkp>> call, Response<List<PasanganLkp>> response) {
+                List<PasanganLkp> PasanganList = response.body();
+                mPasanganAdapter = new PasanganAdapter(PasanganList,DashboardActivity.this);
+                mRecyclerViewPasangan.setAdapter(mPasanganAdapter);
+            }
+
+            @Override
+            public void onFailure(Call<List<PasanganLkp>> call, Throwable t) {
+                tInternetHilang.setVisibility(View.VISIBLE);
             }
         });
     }
@@ -83,9 +114,10 @@ public class DashboardActivity extends Activity implements View.OnClickListener 
                 Intent i = new Intent(DashboardActivity.this, TambahKandidatActivity.class);
                 startActivity(i);
                 break;
-            case R.id.edit_button:
-                Intent b = new Intent(DashboardActivity.this, ProfilActivity.class);
-                startActivity(b);
+
+            case R.id.button_tambahpasangan:
+                Intent pasanganac = new Intent(DashboardActivity.this, tambahPasanganActivity.class);
+                startActivity(pasanganac);
                 break;
         }
     }

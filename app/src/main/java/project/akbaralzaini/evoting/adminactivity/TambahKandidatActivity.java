@@ -13,7 +13,7 @@ import android.widget.TextView;
 import project.akbaralzaini.evoting.R;
 import project.akbaralzaini.evoting.Rest.ApiClient;
 import project.akbaralzaini.evoting.Rest.ApiInterface;
-import project.akbaralzaini.evoting.model.PostUpdateDelKandidat;
+import project.akbaralzaini.evoting.model.Kandidat;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -21,10 +21,11 @@ import retrofit2.Response;
 //TODO : Restfull untuk create belum di buat.
 public class TambahKandidatActivity extends Activity {
 
-    EditText mNama,mKelas, mTanggalLahir, mVisi, mMisi, mPengalaman, mNisn;
+    EditText mNama,mKelas, mTanggalLahir, mVisi, mMisi, mPengalaman, mNis;
     Button btnSimpan;
     TextView btnBack;
     ApiInterface mApiInterface;
+    String file_path="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,18 +38,21 @@ public class TambahKandidatActivity extends Activity {
         mPengalaman = findViewById(R.id.pengalaman_kandidat);
         mVisi = findViewById(R.id.visi_kandidat);
         mMisi = findViewById(R.id.misi_kandidat);
-        mNisn = findViewById(R.id.nisn_kandidat);
+        mNis = findViewById(R.id.nisn_kandidat);
 
         mApiInterface = ApiClient.getClient().create(ApiInterface.class);
         btnSimpan = findViewById(R.id.button_simpan);
         btnBack = findViewById(R.id.button_batal);
 
         btnSimpan.setOnClickListener(view -> {
-            Call<PostUpdateDelKandidat> postUpdateDelKandidatCall = mApiInterface.postKandidat(mNama.getText().toString(),mKelas.getText().toString(),mNisn.getText().toString(),mVisi.getText().toString(),mMisi.getText().toString(),mTanggalLahir.getText().toString(),mPengalaman.getText().toString(),1);
-            postUpdateDelKandidatCall.enqueue(new Callback<PostUpdateDelKandidat>() {
+
+            //TODO : BENERI UPLOAD IMAGE
+            Call<Kandidat> postUpdateDelKandidatCall = mApiInterface.postKandidat(k);
+            postUpdateDelKandidatCall.enqueue(new Callback<Kandidat>() {
                 @Override
-                public void onResponse(Call<PostUpdateDelKandidat> call, Response<PostUpdateDelKandidat> response) {
-                    //Toast.makeText(getApplicationContext(), "Berhasil Ditambahkan",Toast.LENGTH_LONG).show();
+                public void onResponse(Call<Kandidat> call, Response<Kandidat> response) {
+                    Kandidat kandidat = response.body();
+                    //Log.e("S",kandidat.getNama());
                     AlertDialog.Builder builder = new AlertDialog.Builder(TambahKandidatActivity.this);
                     builder.setTitle("Informasi");
                     builder.setMessage("Data Berhasil ditambahkan");
@@ -63,7 +67,7 @@ public class TambahKandidatActivity extends Activity {
                 }
 
                 @Override
-                public void onFailure(Call<PostUpdateDelKandidat> call, Throwable t) {
+                public void onFailure(Call<Kandidat> call, Throwable t) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(TambahKandidatActivity.this);
                     builder.setTitle("Informasi");
                     builder.setMessage("Data Gagal ditambahkan");

@@ -2,9 +2,12 @@ package project.akbaralzaini.evoting.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class PostUpdateDelUser {
-    @SerializedName("username") private String username;
-    @SerializedName("password") private String password;
+public class Login {
+    @SerializedName("username")
+    private String username;
+    @SerializedName("password")
+    private String password;
+
 
     public String getUsername() {
         return username;
@@ -21,4 +24,5 @@ public class PostUpdateDelUser {
     public void setPassword(String password) {
         this.password = password;
     }
+
 }

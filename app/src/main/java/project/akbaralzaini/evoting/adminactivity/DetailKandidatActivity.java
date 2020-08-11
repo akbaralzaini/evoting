@@ -3,9 +3,13 @@ package project.akbaralzaini.evoting.adminactivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import project.akbaralzaini.evoting.R;
 
@@ -13,6 +17,7 @@ public class DetailKandidatActivity extends Activity {
 
     Button editButton;
     TextView  mNama,mKelas,mTanggalLahir,mNomorUrut,mVisi,mMisi,mPengalaman;
+    ImageView iFotoKandidat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +30,9 @@ public class DetailKandidatActivity extends Activity {
         mVisi = findViewById(R.id.visi_kandidat);
         mMisi = findViewById(R.id.misi_kandidat);
         mPengalaman = findViewById(R.id.pengalaman_kandidat);
+        iFotoKandidat = findViewById(R.id.gambar_kandidat);
+
+
 
         Intent mIntent = getIntent();
         mNama.setText(mIntent.getStringExtra("nama"));
@@ -34,6 +42,8 @@ public class DetailKandidatActivity extends Activity {
         mVisi.setText(mIntent.getStringExtra("visi"));
         mMisi.setText(mIntent.getStringExtra("misi"));
         mPengalaman.setText(mIntent.getStringExtra("pengalaman"));
+        String url = "http://192.168.31.2/uploads/kandidat/"+mIntent.getStringExtra("id")+"/"+mIntent.getStringExtra("foto");
+        Picasso.get().load(url).into(iFotoKandidat);
 
         editButton = findViewById(R.id.button_edit);
 

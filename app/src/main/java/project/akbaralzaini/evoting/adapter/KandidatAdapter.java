@@ -1,5 +1,6 @@
 package project.akbaralzaini.evoting.adapter;
 
+import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +10,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -36,7 +39,11 @@ public class KandidatAdapter extends RecyclerView.Adapter<KandidatAdapter.MyView
 
         holder.mTextViewNama.setText(mKandidatList.get(position).getNama());
         holder.mTextViewKelas.setText(mKandidatList.get(position).getKelas());
-        holder.mTextViewUrut.setText(mKandidatList.get(position).getId());
+
+        String url = "http://192.168.31.2/uploads/kandidat/"+mKandidatList.get(position).getId()+"/"+mKandidatList.get(position).getFoto();
+        Picasso.get().load(url).resize(500,500).into(holder.mImageViewFoto);
+
+       // holder.mTextViewUrut.setText(mKandidatList.get(position).getId());
        // holder.mImageViewFoto.setImageResource(mKandidatList.get(position).getFoto());
         holder.itemView.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -49,7 +56,7 @@ public class KandidatAdapter extends RecyclerView.Adapter<KandidatAdapter.MyView
                 i.putExtra("visi",mKandidatList.get(position).getVisi());
                 i.putExtra("misi",mKandidatList.get(position).getMisi());
                 i.putExtra("tanggal_lahir",mKandidatList.get(position).getTanggal_lahir());
-                i.putExtra("pengalaman",mKandidatList.get(position).getPelngalaman());
+                i.putExtra("pengalaman",mKandidatList.get(position).getPengalaman());
                 i.putExtra("foto",mKandidatList.get(position).getFoto());
                 view.getContext().startActivity(i);
             }
@@ -67,10 +74,10 @@ public class KandidatAdapter extends RecyclerView.Adapter<KandidatAdapter.MyView
 
         public MyViewHolder(View itemView) {
             super(itemView);
-            mTextViewNama = (TextView) itemView.findViewById(R.id.nama_kandidat);
-            mTextViewKelas = (TextView) itemView.findViewById(R.id.kelas_kandidat);
-            mTextViewUrut = (TextView) itemView.findViewById(R.id.nomor_kandidat);
-            mImageViewFoto = (ImageView) itemView.findViewById(R.id.gambar_kandidat);
+            mTextViewNama = itemView.findViewById(R.id.nama_kandidat);
+            mTextViewKelas = itemView.findViewById(R.id.kelas_kandidat);
+           // mTextViewUrut = (TextView) itemView.findViewById(R.id.nomor_kandidat);
+            mImageViewFoto = itemView.findViewById(R.id.gambar_kandidat);
         }
     }
 
