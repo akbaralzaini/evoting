@@ -11,12 +11,6 @@ public class Kandidat {
     private String nama;
     @SerializedName("nis")
     private String nis;
-    @SerializedName("visi")
-    private String visi;
-    @SerializedName("misi")
-    private String misi;
-    @SerializedName("tanggal_lahir")
-    private String tanggal_lahir;
     @SerializedName("kelas")
     private String kelas;
     @SerializedName("pengalaman")
@@ -46,30 +40,6 @@ public class Kandidat {
 
     public void setNis(String nis) {
         this.nis = nis;
-    }
-
-    public String getVisi() {
-        return visi;
-    }
-
-    public void setVisi(String visi) {
-        this.visi = visi;
-    }
-
-    public String getMisi() {
-        return misi;
-    }
-
-    public void setMisi(String misi) {
-        this.misi = misi;
-    }
-
-    public String getTanggal_lahir() {
-        return tanggal_lahir;
-    }
-
-    public void setTanggal_lahir(String tanggal_lahir) {
-        this.tanggal_lahir = tanggal_lahir;
     }
 
     public String getKelas() {

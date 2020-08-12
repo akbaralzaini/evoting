@@ -53,9 +53,6 @@ public class KandidatAdapter extends RecyclerView.Adapter<KandidatAdapter.MyView
                 i.putExtra("nama",mKandidatList.get(position).getNama());
                 i.putExtra("kelas",mKandidatList.get(position).getKelas());
                 i.putExtra("nis",mKandidatList.get(position).getNis());
-                i.putExtra("visi",mKandidatList.get(position).getVisi());
-                i.putExtra("misi",mKandidatList.get(position).getMisi());
-                i.putExtra("tanggal_lahir",mKandidatList.get(position).getTanggal_lahir());
                 i.putExtra("pengalaman",mKandidatList.get(position).getPengalaman());
                 i.putExtra("foto",mKandidatList.get(position).getFoto());
                 view.getContext().startActivity(i);

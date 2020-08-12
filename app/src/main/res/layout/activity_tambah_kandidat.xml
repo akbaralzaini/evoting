@@ -138,45 +138,7 @@
 
             </RelativeLayout>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="12dp"
-                android:paddingTop="12dp"
-                android:paddingStart="12dp"
-                android:paddingEnd="12dp"
-                android:layout_marginTop="1dp"
-                android:background="@color/backgroud_putih">
-                <ImageView
-                    android:id="@+id/iconttl"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/date_range"/>
-                <LinearLayout
-                    android:layout_marginVertical="12dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginStart="12dp"
-                    android:layout_toRightOf="@id/iconttl">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Tanggal Lahir"/>
-                    <EditText
-                        android:textSize="14sp"
-                        android:id="@+id/ttl_kandidat"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@android:color/transparent"
-                        android:hint="hh mm yyyy"/>
 
-                </LinearLayout>
-
-
-            </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -259,93 +221,6 @@
 
             </RelativeLayout>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="12dp"
-                android:paddingTop="12dp"
-                android:paddingStart="12dp"
-                android:paddingEnd="12dp"
-                android:layout_marginTop="1dp"
-                android:background="@color/backgroud_putih">
-                <ImageView
-                    android:id="@+id/iconvisi"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/hashtag"/>
-                <LinearLayout
-                    android:layout_marginVertical="12dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginStart="12dp"
-                    android:layout_toEndOf="@id/iconvisi">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/visi"/>
-
-                    <EditText
-                        android:textSize="14sp"
-                        android:id="@+id/visi_kandidat"
-                        android:inputType="text|textMultiLine"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@android:color/transparent"
-                        android:hint="@string/visi_kandidat"/>
-
-                </LinearLayout>
-
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:elevation="10dp"
-                android:translationZ="2dp"
-                android:outlineProvider="paddedBounds"
-                android:paddingBottom="12dp"
-                android:paddingTop="12dp"
-                android:paddingStart="12dp"
-                android:paddingEnd="12dp"
-                android:layout_marginTop="1dp"
-                android:background="@color/backgroud_putih">
-                <ImageView
-                    android:id="@+id/iconmisi"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/location_arrow"/>
-                <LinearLayout
-                    android:layout_marginTop="12dp"
-                    android:layout_marginBottom="12dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginStart="12dp"
-                    android:layout_toEndOf="@id/iconmisi">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/misi_title"/>
-
-                    <EditText
-                        android:textSize="14sp"
-                        android:id="@+id/misi_kandidat"
-                        android:inputType="text|textMultiLine"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@android:color/transparent"
-                        android:hint="@string/misi_kandidat_hint"/>
-
-                </LinearLayout>
-
-
-            </RelativeLayout>
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

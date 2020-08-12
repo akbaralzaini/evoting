@@ -3,6 +3,7 @@ package project.akbaralzaini.evoting.Rest;
 import java.util.List;
 
 import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
 import project.akbaralzaini.evoting.model.Kandidat;
 import project.akbaralzaini.evoting.model.PostUpdateDelKandidat;
 import retrofit2.Call;
@@ -20,15 +21,13 @@ public interface ApiInterface {
     @GET("kandidat")
     Call<List<Kandidat>> getKandidat();
 
-
-    @FormUrlEncoded
     @Multipart
     @POST("kandidat/create")
-    Call<Kandidat> postKandidat(@Field("nama") String nama,
-                                @Field("nis") String nis,
-                                @Field("kelas") String kelas,
-                                @Field("pengalaman") String pengalaman,
-                                @Part MultipartBody.Part foto);
+    Call<Kandidat> postKandidat(@Part MultipartBody.Part foto,
+                                @Part("nama") RequestBody nama,
+                                @Part("nis") RequestBody nis,
+                                @Part("kelas") RequestBody kelas,
+                                @Part("pengalaman") RequestBody pengalaman);
 
 
     @FormUrlEncoded
