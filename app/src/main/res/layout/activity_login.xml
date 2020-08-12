@@ -9,11 +9,11 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="350dp"
+        android:layout_height="250dp"
         android:layout_alignParentRight="true"
-        android:src="@drawable/login_ilus"
-        android:layout_alignParentBottom="true"
-        android:layout_marginRight="-240dp"/>
+        android:src="@drawable/v"
+        android:layout_marginBottom="30dp"
+        android:layout_alignParentBottom="true"/>
 
     <TextView
         android:id="@+id/login_text"
@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/name_email"
             android:layout_toRightOf="@id/email_icon"
-            android:hint="youremail@gmail.com"
+            android:hint="username"
             android:background="@android:color/transparent"/>
 
 

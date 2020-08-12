@@ -19,20 +19,20 @@ import retrofit2.http.Path;
 
 public interface ApiPasanganInterface {
 
-    @GET("pasangan/")
+    @GET("Pasangan/")
     Call<List<Pasangan>> getPasangan();
 
-    @GET("pasangan/")
+    @GET("Pasangan/")
     Call<List<PasanganLkp>> getPasanganLengkap();
 
-    @POST("pasangan/create")
+    @POST("Pasangan/create")
     Call<Pasangan> postPasangan(@Body Pasangan pasangan);
 
 
-    @PUT("pasangan/update/{id}")
+    @PUT("Pasangan/update/{id}")
     Call<Pasangan> putKandidat(@Path("id") String id, @Body Pasangan pasangan);
 
 
-    @DELETE("pasangan/delete/{id}")
+    @DELETE("Pasangan/delete/{id}")
     Call<Pasangan> deletePasangan(@Path("id") String id);
 }

@@ -46,10 +46,10 @@ public class PasanganAdapter extends RecyclerView.Adapter<PasanganAdapter.MyView
     @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        String url = "http://192.168.31.2/uploads/kandidat/"+mPasanganList.get(position).getId_ketua()+"/"+mPasanganList.get(position).getFoto_ketua();
+        String url = "https://voting.pkitapp.com/uploads/kandidat/"+mPasanganList.get(position).getId_ketua()+"/"+mPasanganList.get(position).getFoto_ketua();
         Picasso.get().load(url).resize(500,500).into(holder.mFotoKetua);
 
-        String urlw = "http://192.168.31.2/uploads/kandidat/"+mPasanganList.get(position).getId_wakil()+"/"+mPasanganList.get(position).getFoto_wakil();
+        String urlw = "https://voting.pkitapp.com/uploads/kandidat/"+mPasanganList.get(position).getId_wakil()+"/"+mPasanganList.get(position).getFoto_wakil();
         Picasso.get().load(urlw).resize(500,500).into(holder.mFotoWakil);
 
         holder.mNomorUrut.setText("Nomor Urut " + mPasanganList.get(position).getNo_urut());

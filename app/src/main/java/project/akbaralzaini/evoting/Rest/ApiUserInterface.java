@@ -24,7 +24,7 @@ public interface ApiUserInterface {
     Call<User> postUser(@Body User user);
 
     @FormUrlEncoded
-    @PUT("user/put/{id}")
+    @PUT("User/put/{id}")
     Call<PostUpdateDelUser> putUser( @Field("id") String id,
                                      @Field("username") String username,
                                      @Field("nama") String nama,

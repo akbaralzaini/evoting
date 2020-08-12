@@ -21,11 +21,11 @@ import retrofit2.http.Part;
 import retrofit2.http.Path;
 
 public interface ApiInterface {
-    @GET("kandidat")
+        @GET("Kandidat")
     Call<List<Kandidat>> getKandidat();
 
     @Multipart
-    @POST("kandidat/create")
+    @POST("Kandidat/create")
     Call<Kandidat> postKandidat(@Part MultipartBody.Part foto,
                                 @Part("nama") RequestBody nama,
                                 @Part("nis") RequestBody nis,
@@ -34,7 +34,7 @@ public interface ApiInterface {
 
 
     @Multipart
-    @POST("kandidat/update/{id}")
+    @POST("Kandidat/update/{id}")
     Call<Kandidat> putKandidat(@Path("id") String id,
                                @Part MultipartBody.Part foto,
                                @Part("nama") RequestBody nama,
@@ -43,6 +43,6 @@ public interface ApiInterface {
                                @Part("pengalaman") RequestBody pengalaman);
 
 
-    @DELETE("kandidat/delete/{id}")
+    @DELETE("Kandidat/delete/{id}")
     Call<Kandidat> deleteKandidat(@Path("id") String id);
 }
