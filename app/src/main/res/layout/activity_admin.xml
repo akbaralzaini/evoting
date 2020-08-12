@@ -25,6 +25,17 @@
         android:padding="12dp"
         android:background="@drawable/shape_top_radius_agakputih">
 
+        <TextView
+            android:id="@+id/perolehan_suara"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Perolehan suara"
+            android:background="@drawable/shape_radius_green"
+            android:textColor="@color/backgroud_putih"
+            android:padding="6dp"
+            android:layout_alignParentRight="true"/>
+
         <FrameLayout
             android:id="@+id/photo_ptofil"
             android:layout_width="70dp"
@@ -36,7 +47,7 @@
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
                 android:padding="6dp"
-                android:src="@drawable/akbaralzaini" />
+                android:src="@drawable/user" />
 
             <ImageView
                 android:src="@drawable/profilframe"

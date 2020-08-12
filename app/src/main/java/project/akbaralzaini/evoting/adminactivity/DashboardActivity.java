@@ -30,6 +30,7 @@ import retrofit2.Response;
 
 public class DashboardActivity extends Activity implements View.OnClickListener {
 
+    TextView bperolehan_suara;
     RelativeLayout ButtonTambah, rButtonTambahPasangan;
     TextView ButtonProfil;
     TextView tInternetHilang;
@@ -51,12 +52,14 @@ public class DashboardActivity extends Activity implements View.OnClickListener 
         rButtonTambahPasangan = findViewById(R.id.button_tambahpasangan);
         namaProfil = findViewById(R.id.nama_profil);
         tInternetHilang = findViewById(R.id.internet_hilang);
+        bperolehan_suara = findViewById(R.id.perolehan_suara);
 
         sharedPrefManager = new SharedPrefManager(this);
         namaProfil.setText(sharedPrefManager.getSPNama());
 
         ButtonTambah.setOnClickListener(this);
         rButtonTambahPasangan.setOnClickListener(this);
+        bperolehan_suara.setOnClickListener(this);
 
 
         //pemanggilan Recycleview untuk list
@@ -118,6 +121,11 @@ public class DashboardActivity extends Activity implements View.OnClickListener 
             case R.id.button_tambahpasangan:
                 Intent pasanganac = new Intent(DashboardActivity.this, tambahPasanganActivity.class);
                 startActivity(pasanganac);
+                break;
+
+            case R.id.perolehan_suara :
+                Intent hasil = new Intent(DashboardActivity.this, HasilActivity.class);
+                startActivity(hasil);
                 break;
         }
     }

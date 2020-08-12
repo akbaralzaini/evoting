@@ -36,7 +36,10 @@ import retrofit2.Response;
 //TODO : Restfull untuk create belum di buat.
 public class TambahKandidatActivity extends Activity implements EasyPermissions.PermissionCallbacks{
 
-    EditText mNama,mKelas, mTanggalLahir, mVisi, mMisi, mPengalaman, mNis;
+    EditText mNama;
+    EditText mKelas;
+    EditText mPengalaman;
+    EditText mNis;
     Button btnSimpan;
     TextView btnBack;
     ApiInterface mApiInterface;
@@ -57,10 +60,7 @@ public class TambahKandidatActivity extends Activity implements EasyPermissions.
 
         mNama = findViewById(R.id.nama_kandidat);
         mKelas = findViewById(R.id.kelas_kandidat);
-        mTanggalLahir = findViewById(R.id.ttl_kandidat);
         mPengalaman = findViewById(R.id.pengalaman_kandidat);
-        mVisi = findViewById(R.id.visi_kandidat);
-        mMisi = findViewById(R.id.misi_kandidat);
         mNis = findViewById(R.id.nisn_kandidat);
 
         mApiInterface = ApiClient.getClient().create(ApiInterface.class);
@@ -82,47 +82,6 @@ public class TambahKandidatActivity extends Activity implements EasyPermissions.
 
         btnSimpan.setOnClickListener(view -> {
             saveData();
-//            //TODO : BENERI UPLOAD IMAGE
-//            RequestBody nama = RequestBody.create(MediaType.parse("text/plain"), mNama.getText().toString());
-//            RequestBody nis = RequestBody.create(MediaType.parse("text/plain"), mNis.getText().toString());
-//            RequestBody kelas = RequestBody.create(MediaType.parse("text/plain"), mKelas.getText().toString());
-//            RequestBody pengalaman = RequestBody.create(MediaType.parse("text/plain"), mPengalaman.getText().toString());
-//
-//
-//            Call<Kandidat> postUpdateDelKandidatCall = mApiInterface.postKandidat(,nama,nis,kelas,pengalaman);
-//            postUpdateDelKandidatCall.enqueue(new Callback<Kandidat>() {
-//                @Override
-//                public void onResponse(Call<Kandidat> call, Response<Kandidat> response) {
-//                    Kandidat kandidat = response.body();
-//                    //Log.e("S",kandidat.getNama());
-//                    AlertDialog.Builder builder = new AlertDialog.Builder(TambahKandidatActivity.this);
-//                    builder.setTitle("Informasi");
-//                    builder.setMessage("Data Berhasil ditambahkan");
-//                    builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-//                        @Override
-//                        public void onClick(DialogInterface dialogInterface, int i) {
-//                            DashboardActivity.ma.refresh();
-//                            finish();
-//                        }
-//                    });
-//                    builder.show();
-//                }
-//
-//                @Override
-//                public void onFailure(Call<Kandidat> call, Throwable t) {
-//                    AlertDialog.Builder builder = new AlertDialog.Builder(TambahKandidatActivity.this);
-//                    builder.setTitle("Informasi");
-//                    builder.setMessage("Data Gagal ditambahkan");
-//                    builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
-//                        @Override
-//                        public void onClick(DialogInterface dialogInterface, int i) {
-//                            Log.e("Gagal","Gagal Menambahkan");
-//                        }
-//                    });
-//                    builder.show();
-//                    //Toast.makeText(TambahKandidatActivity.this, "Error",Toast.LENGTH_LONG).show();
-//                }
-//            });
         });
 
         btnBack.setOnClickListener(view -> {
@@ -212,7 +171,8 @@ public class TambahKandidatActivity extends Activity implements EasyPermissions.
                 builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        DashboardActivity.ma.refresh();
+                        Intent det = new Intent(TambahKandidatActivity.this, DashboardActivity.class);
+                        startActivity(det);
                         finish();
                     }
                 });

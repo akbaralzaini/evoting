@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:elevation="10dp"
+        android:translationZ="2dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginStart="6dp"
+        android:outlineProvider="paddedBounds"
+        android:layout_marginVertical="12dp"
+        android:background="@drawable/shape_radius_white">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/no_urutl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:text="Nomor Urut 1"/>
+            <TextView
+                android:id="@+id/nama_ketual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="nama ketua : akkakak"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/backgroud_merah"
+                android:textSize="16sp"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/hasil"
+            android:layout_alignParentRight="true"
+            android:text="Total Suara"/>
+        <TextView
+            android:id="@+id/hasil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="87"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"/>
+
+
+
+    </RelativeLayout>
+</RelativeLayout>
