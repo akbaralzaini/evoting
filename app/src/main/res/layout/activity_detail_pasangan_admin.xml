@@ -268,7 +268,7 @@
                     android:id="@+id/tite_pengalamanw"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="PENGALAMAN KETUA"
+                    android:text="PENGALAMAN WAKIL"
                     android:textStyle="bold"
                     android:textSize="24dp"
                     android:textColor="@color/colorPrimaryDark"/>
