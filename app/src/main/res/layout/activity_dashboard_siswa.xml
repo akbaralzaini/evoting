@@ -25,6 +25,17 @@
         android:padding="12dp"
         android:background="@drawable/shape_top_radius_agakputih">
 
+        <TextView
+            android:id="@+id/perolehan_suaras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Perolehan suara"
+            android:background="@drawable/shape_radius_green"
+            android:textColor="@color/backgroud_putih"
+            android:padding="6dp"
+            android:layout_alignParentRight="true"/>
+
         <FrameLayout
             android:id="@+id/photo_ptofil"
             android:layout_width="70dp"
@@ -54,6 +65,20 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_marginStart="8dp"/>
+        <TextView
+            android:id="@+id/update_profil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update profil"
+            android:background="@drawable/shape_radius_green"
+            android:textColor="@color/backgroud_putih"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:layout_toRightOf="@id/photo_ptofil"
+            android:layout_below="@id/nama_profil"
+            android:layout_margin="10dp"/>
 
         <View
             android:id="@+id/hairline"

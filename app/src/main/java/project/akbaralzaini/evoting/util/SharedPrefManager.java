@@ -11,6 +11,7 @@ public class SharedPrefManager {
     public static final String SP_USERNAME = "spUsername";
     public static final String SP_ID = "spId";
     public static final String SP_ROLE = "spRore";
+    public static final String SP_PASSWORD = "password";
 
     public static final String SP_SUDAH_LOGIN = "spSudahLogin";
 
@@ -56,4 +57,6 @@ public class SharedPrefManager {
     public String getRole(){
         return sp.getString(SP_ROLE,"");
     }
+
+    public String getSpPassword(){ return sp.getString(SP_PASSWORD,""); }
 }

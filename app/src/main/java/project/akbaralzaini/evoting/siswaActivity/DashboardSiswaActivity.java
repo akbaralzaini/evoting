@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -20,6 +21,7 @@ import project.akbaralzaini.evoting.Rest.ApiPasanganInterface;
 import project.akbaralzaini.evoting.adapter.KandidatAdapter;
 import project.akbaralzaini.evoting.adapter.PasanganAdapter;
 import project.akbaralzaini.evoting.adminactivity.DashboardActivity;
+import project.akbaralzaini.evoting.adminactivity.HasilActivity;
 import project.akbaralzaini.evoting.model.Kandidat;
 import project.akbaralzaini.evoting.model.Pasangan;
 import project.akbaralzaini.evoting.model.PasanganLkp;
@@ -29,9 +31,10 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class DashboardSiswaActivity extends Activity {
+    TextView bperolehan_suara;
     TextView tInternetHilang;
     TextView namaProfil;
-    ImageView iKetua,iWakil;
+    TextView tEditProfil;
     SharedPrefManager sharedPrefManager;
     ApiPasanganInterface mApiPasanganInterface;
     private RecyclerView mRecyclerViewPasangan;
@@ -45,9 +48,26 @@ public class DashboardSiswaActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard_siswa);
 
+        bperolehan_suara = findViewById(R.id.perolehan_suaras);
         namaProfil = findViewById(R.id.nama_profil);
         sharedPrefManager = new SharedPrefManager(this);
         namaProfil.setText(sharedPrefManager.getSPNama());
+        tEditProfil = findViewById(R.id.button_edit_profil);
+
+        bperolehan_suara.setOnClickListener(view -> {
+            Intent hasil = new Intent(DashboardSiswaActivity.this, HasilActivity.class);
+            startActivity(hasil);
+        });
+
+        tEditProfil.setOnClickListener(view -> {
+            Intent edit = new Intent(DashboardSiswaActivity.this,EditProfilActivity.class);
+            edit.putExtra("nama",sharedPrefManager.getSPNama());
+            edit.putExtra("username",sharedPrefManager.getSpUsername());
+            edit.putExtra("password",sharedPrefManager.getSpPassword());
+            edit.putExtra("role",sharedPrefManager.getRole());
+            edit.putExtra("id",sharedPrefManager.getSpId());
+            startActivity(edit);
+        });
 
         //pemanggilan Recycleview untuk list
         mRecyclerViewPasangan = findViewById(R.id.list_pasangan);

@@ -45,7 +45,7 @@
             android:layout_height="90dp"
             android:scaleType="centerCrop"
             android:layout_centerInParent="true"
-            android:src="@drawable/akbaralzaini" />
+            android:src="@drawable/user" />
     </RelativeLayout>
 
     <LinearLayout
@@ -80,72 +80,13 @@
                 android:id="@+id/nama_profil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Akbar Al Zaini"
-                android:layout_marginStart="12dp"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingVertical="16dp"
-            android:paddingHorizontal="20dp"
-            android:background="@color/backgroud_putih"
-            android:layout_marginBottom="1dp"
-            android:orientation="horizontal">
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/card_ungu"/>
-            <EditText
-                android:background="@android:color/transparent"
-                android:id="@+id/idcard_profil"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="09031281621120"
-                android:layout_marginStart="12dp"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingVertical="16dp"
-            android:paddingHorizontal="20dp"
-            android:background="@color/backgroud_putih"
-            android:layout_marginBottom="1dp"
-            android:orientation="horizontal">
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/calendar_ungu"/>
-            <EditText
-                android:background="@android:color/transparent"
-                android:id="@+id/ttl_profil"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Lahat, 11 maret 1999"
-                android:layout_marginStart="12dp"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingVertical="16dp"
-            android:paddingHorizontal="20dp"
-            android:background="@color/backgroud_putih"
-            android:layout_marginBottom="1dp"
-            android:orientation="horizontal">
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/map_marker_ungu"/>
-            <EditText
-                android:background="@android:color/transparent"
-                android:id="@+id/alamat_profil"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Palembang, Sumatera selatan"
+                android:hint="nama"
                 android:layout_marginStart="12dp"/>
         </LinearLayout>
     </LinearLayout>
 
     <Button
+        android:id="@+id/simpan_profil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Simpan"

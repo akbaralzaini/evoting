@@ -97,6 +97,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
                         sharedPrefManager.saveSPString(SharedPrefManager.SP_NAMA, a.getNama());
                         sharedPrefManager.saveSPString(SharedPrefManager.SP_ID, a.getId());
                         sharedPrefManager.saveSPString(SharedPrefManager.SP_ROLE,a.getRole());
+                        sharedPrefManager.saveSPString(SharedPrefManager.SP_PASSWORD,a.getPassword());
                         // Shared Pref ini berfungsi untuk menjadi trigger session login
                         sharedPrefManager.saveSPBoolean(SharedPrefManager.SP_SUDAH_LOGIN, true);
                         progress.dismiss();

@@ -15,6 +15,7 @@ import retrofit2.http.GET;
 import retrofit2.http.HTTP;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
+import retrofit2.http.Path;
 
 public interface ApiUserInterface {
     @GET("User/")
@@ -23,15 +24,8 @@ public interface ApiUserInterface {
     @POST("User/create")
     Call<User> postUser(@Body User user);
 
-    @FormUrlEncoded
-    @PUT("User/put/{id}")
-    Call<PostUpdateDelUser> putUser( @Field("id") String id,
-                                     @Field("username") String username,
-                                     @Field("nama") String nama,
-                                     @Field("password") String password,
-                                     @Field("role") String role,
-                                     @Field("create_at") String create_at,
-                                     @Field("update_at") String update_at);
+    @PUT("User/update/{id}")
+    Call<User> putUser( @Path("id") String id, @Body User user);
 
 
     @POST("Authentication/login")

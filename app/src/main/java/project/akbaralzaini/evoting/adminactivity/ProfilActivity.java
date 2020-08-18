@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import project.akbaralzaini.evoting.R;
+import project.akbaralzaini.evoting.siswaActivity.EditProfilActivity;
 
 public class ProfilActivity extends Activity {
 
