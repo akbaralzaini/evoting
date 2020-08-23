@@ -168,8 +168,7 @@ public class EditKandidatActivity extends Activity implements EasyPermissions.Pe
                 builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        Intent det = new Intent(EditKandidatActivity.this, DashboardActivity.class);
-                        startActivity(det);
+                        DashboardActivity.ma.refresh();
                         finish();
                     }
                 });

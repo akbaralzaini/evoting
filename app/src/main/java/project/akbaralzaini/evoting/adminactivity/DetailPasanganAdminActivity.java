@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -65,6 +66,8 @@ public class DetailPasanganAdminActivity extends Activity {
         tNamaWakil.setText(mIntent.getStringExtra("nama_wakil"));
         tKelasKetua.setText(mIntent.getStringExtra("kelas_ketua"));
         tKelasWakil.setText(mIntent.getStringExtra("kelas_wakil"));
+
+        Log.d("sss",mIntent.getStringExtra("foto_ketua"));
 
         Picasso.get()
                 .load(mIntent.getStringExtra("foto_ketua"))
