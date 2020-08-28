@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/ilustrasi_login"
-        android:text="Voting Ketua Osis terbaikmu"
+        android:text="Voting Ketua Senat Mahasiswa"
         android:textSize="20sp"
         android:textColor="@color/backgroud_putih"
         android:textStyle="bold"
