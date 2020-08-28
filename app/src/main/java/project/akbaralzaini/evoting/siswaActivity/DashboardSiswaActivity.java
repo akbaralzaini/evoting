@@ -52,7 +52,7 @@ public class DashboardSiswaActivity extends Activity {
         namaProfil = findViewById(R.id.nama_profil);
         sharedPrefManager = new SharedPrefManager(this);
         namaProfil.setText(sharedPrefManager.getSPNama());
-        tEditProfil = findViewById(R.id.button_edit_profil);
+        tEditProfil = findViewById(R.id.update_profil);
 
         bperolehan_suara.setOnClickListener(view -> {
             Intent hasil = new Intent(DashboardSiswaActivity.this, HasilActivity.class);

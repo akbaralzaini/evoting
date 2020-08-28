@@ -56,6 +56,24 @@
             android:gravity="center"
             android:visibility="gone"/>
 
+        <TextView
+            android:id="@+id/chart_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHART HASIL"
+            android:layout_below="@id/list_hasil1"
+            android:textColor="@color/main"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginVertical="12dp"
+            android:layout_centerHorizontal="true"/>
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:layout_below="@id/chart_title"
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"/>
+
     </RelativeLayout>
 
 </RelativeLayout>

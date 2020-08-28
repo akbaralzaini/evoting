@@ -19,6 +19,7 @@ import project.akbaralzaini.evoting.Rest.ApiVotingInterface;
 import project.akbaralzaini.evoting.adminactivity.DashboardActivity;
 import project.akbaralzaini.evoting.adminactivity.EditPasActivity;
 import project.akbaralzaini.evoting.model.User;
+import project.akbaralzaini.evoting.util.SharedPrefManager;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -28,10 +29,14 @@ public class EditProfilActivity extends Activity {
     Button bSimpan;
     String role,password,username,id;
     ApiUserInterface mApiInterface;
+    SharedPrefManager sharedPrefManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profil);
+
+        sharedPrefManager = new SharedPrefManager(this);
 
         edtNama = findViewById(R.id.nama_profil);
         mApiInterface = ApiClient.getClient().create(ApiUserInterface.class);
@@ -42,6 +47,7 @@ public class EditProfilActivity extends Activity {
         password = a.getStringExtra("password");
         username = a.getStringExtra("username");
         id = a.getStringExtra("id");
+        Log.d("ababba",role+"x"+username+"y"+password);
 
         bSimpan = findViewById(R.id.simpan_profil);
 
@@ -64,6 +70,7 @@ public class EditProfilActivity extends Activity {
                         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
+                                sharedPrefManager.saveSPString(SharedPrefManager.SP_NAMA, edtNama.getText().toString());
                                 Intent det = new Intent(EditProfilActivity.this, DashboardSiswaActivity.class);
                                 startActivity(det);
                                 finish();
