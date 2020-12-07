@@ -136,5 +136,7 @@ public class DetailPasanganAdminActivity extends Activity {
             }
         });
 
+        ImageView back = findViewById(R.id.backicon);
+        back.setOnClickListener(v -> finish());
     }
 }

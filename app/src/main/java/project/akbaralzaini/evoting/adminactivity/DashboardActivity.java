@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import project.akbaralzaini.evoting.LoginActivity;
 import project.akbaralzaini.evoting.R;
 import project.akbaralzaini.evoting.Rest.ApiClient;
 import project.akbaralzaini.evoting.Rest.ApiInterface;
@@ -30,7 +31,7 @@ import retrofit2.Response;
 
 public class DashboardActivity extends Activity implements View.OnClickListener {
 
-    TextView bperolehan_suara;
+    TextView bperolehan_suara,btnLogout;
     RelativeLayout ButtonTambah, rButtonTambahPasangan;
     TextView ButtonProfil;
     TextView tInternetHilang;
@@ -53,6 +54,7 @@ public class DashboardActivity extends Activity implements View.OnClickListener 
         namaProfil = findViewById(R.id.nama_profil);
         tInternetHilang = findViewById(R.id.internet_hilang);
         bperolehan_suara = findViewById(R.id.perolehan_suara);
+        btnLogout = findViewById(R.id.logout);
 
         sharedPrefManager = new SharedPrefManager(this);
         namaProfil.setText(sharedPrefManager.getSPNama());
@@ -75,6 +77,12 @@ public class DashboardActivity extends Activity implements View.OnClickListener 
         ma=this;
         refresh();
 
+        btnLogout.setOnClickListener(v -> {
+            sharedPrefManager.saveSPBoolean(SharedPrefManager.SP_SUDAH_LOGIN,false);
+            Intent login =  new Intent(DashboardActivity.this, LoginActivity.class);
+            startActivity(login);
+            finish();
+        });
     }
 
     public void refresh() {

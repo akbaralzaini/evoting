@@ -4,6 +4,7 @@ import java.util.List;
 
 import project.akbaralzaini.evoting.model.HasilVoting;
 import project.akbaralzaini.evoting.model.User;
+import project.akbaralzaini.evoting.model.Voters;
 import project.akbaralzaini.evoting.model.Voting;
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -16,4 +17,7 @@ public interface ApiVotingInterface {
 
     @POST("Voting/create")
     Call<Voting> Createvoting(@Body Voting voting);
+
+    @GET("voter")
+    Call<List<Voters>> getVoters();
 }

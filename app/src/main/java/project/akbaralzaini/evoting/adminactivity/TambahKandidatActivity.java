@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -194,6 +195,9 @@ public class TambahKandidatActivity extends Activity implements EasyPermissions.
                 //Toast.makeText(TambahKandidatActivity.this, "Error",Toast.LENGTH_LONG).show();
             }
         });
+
+        ImageView back = findViewById(R.id.backicon);
+        back.setOnClickListener(v -> finish());
     }
 
 }

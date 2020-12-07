@@ -47,7 +47,7 @@ public class DetailKandidatActivity extends Activity {
         mKelas.setText(mIntent.getStringExtra("kelas"));
         mNomorUrut.setText(mIntent.getStringExtra("nis"));
         mPengalaman.setText(mIntent.getStringExtra("pengalaman"));
-        String url = "https://voting.pkitapp.com/uploads/kandidat/"+mIntent.getStringExtra("id")+"/"+mIntent.getStringExtra("foto");
+        String url = "https://voting.pkitapp.com/public/uploads/kandidat/"+mIntent.getStringExtra("id")+"/"+mIntent.getStringExtra("foto");
         Picasso.get().load(url).into(iFotoKandidat);
 
         editButton = findViewById(R.id.button_edit);
@@ -103,6 +103,10 @@ public class DetailKandidatActivity extends Activity {
             });
 
         });
+
+
+        ImageView back = findViewById(R.id.backicon);
+        back.setOnClickListener(v -> finish());
 
     }
 }

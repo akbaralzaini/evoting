@@ -23,6 +23,7 @@
             android:textStyle="bold"
             android:textSize="16dp"
             android:layout_centerInParent="true"/>
+
         <ImageView
             android:id="@+id/backicon"
             android:layout_width="15dp"

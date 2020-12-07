@@ -38,6 +38,19 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         mApiInterface = ApiClient.getClient().create(ApiUserInterface.class);
         sharedPrefManager = new SharedPrefManager(this);
 
+        if (sharedPrefManager.getSPSudahLogin()){
+            if (sharedPrefManager.getRole().equals("admin")){
+                Intent b = new Intent(LoginActivity.this, DashboardActivity.class);
+                startActivity(b);
+                finish();
+            }
+            else{
+                Intent b = new Intent(LoginActivity.this, DashboardSiswaActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(b);
+                finish();
+            }
+        }
+
         edtUsername = findViewById(R.id.username_login);
         edtPassword = findViewById(R.id.password_login);
         buttonLogin = findViewById(R.id.button_login);

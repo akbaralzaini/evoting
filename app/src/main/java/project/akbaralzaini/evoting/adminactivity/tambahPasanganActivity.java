@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -138,7 +139,8 @@ public class tambahPasanganActivity extends Activity {
             }
         });
 
-
+        ImageView back = findViewById(R.id.backicon);
+        back.setOnClickListener(v -> finish());
     }
 
 

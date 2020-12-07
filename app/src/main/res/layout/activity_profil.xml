@@ -140,19 +140,34 @@
                 android:layout_marginStart="12dp"/>
         </LinearLayout>
     </LinearLayout>
-
-    <Button
-        android:id="@+id/button_edit_profil"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Edit"
-        android:textColor="@color/backgroud_putih"
-        android:background="@drawable/shape_radius_green"
+        android:orientation="vertical"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:textStyle="bold"
-        android:textSize="18sp"
-        android:paddingHorizontal="50dp"
-        android:layout_marginBottom="28dp"/>
+        android:layout_centerHorizontal="true">
+        <Button
+            android:id="@+id/button_edit_profil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit"
+            android:textColor="@color/backgroud_putih"
+            android:background="@drawable/shape_radius_green"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:paddingHorizontal="50dp"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:background="@drawable/shape_radius_white"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="21dp"/>
+    </LinearLayout>
+
+
 
 </RelativeLayout>

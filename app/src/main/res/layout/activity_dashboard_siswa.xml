@@ -10,13 +10,27 @@
         android:id="@+id/dashboard_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="VOTING KETUA OSIS"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textSize="18sp"
-        android:layout_margin="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="14dp"
+        android:text="VOTING KETUA SENAT"
         android:textColor="@color/backgroud_putih"
-        android:textStyle="bold"
-        android:layout_alignParentTop="true"/>
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:background="@drawable/shape_radius_white"
+        android:padding="6dp"
+        android:layout_alignParentRight="true"
+        android:layout_margin="12dp"
+        android:textColor="@color/backgroud_merah"/>
 
     <RelativeLayout
         android:layout_width="match_parent"

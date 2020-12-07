@@ -10,7 +10,7 @@
         android:id="@+id/dashboard_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="HASIL VOTING KETUA OSIS"
+        android:text="HASIL VOTING KETUA SENAT"
         android:layout_centerHorizontal="true"
         android:textSize="18sp"
         android:layout_margin="14dp"
@@ -18,62 +18,85 @@
         android:textStyle="bold"
         android:layout_alignParentTop="true"/>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <ScrollView
         android:layout_below="@id/dashboard_title"
-        android:padding="12dp"
-        android:background="@drawable/shape_top_radius_agakputih">
-
-
-        <TextView
-            android:id="@+id/des_daftar_pasangan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="DAFTAR PASANGAN"
-            android:textColor="@color/main"
-            android:textStyle="bold"
-            android:textSize="16sp"
-            android:layout_marginVertical="12dp"
-            android:layout_centerHorizontal="true"/>
-
-        <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/des_daftar_pasangan"
-            android:id="@+id/list_hasil1"
-            android:scrollbars="vertical"
-            android:layout_marginTop="12dp"
-            android:background="@android:color/transparent"/>
+            android:padding="12dp"
+            android:background="@drawable/shape_top_radius_agakputih">
 
-        <TextView
-            android:id="@+id/internet_hilang"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/des_daftar_pasangan"
-            android:text="Hidupkan Koneksi Internet"
-            android:textSize="16sp"
-            android:gravity="center"
-            android:visibility="gone"/>
+            <TextView
+                android:id="@+id/des_daftar_pasangan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DAFTAR PASANGAN"
+                android:textColor="@color/main"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginVertical="12dp"
+                android:layout_centerHorizontal="true"/>
 
-        <TextView
-            android:id="@+id/chart_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CHART HASIL"
-            android:layout_below="@id/list_hasil1"
-            android:textColor="@color/main"
-            android:textStyle="bold"
-            android:textSize="16sp"
-            android:layout_marginVertical="12dp"
-            android:layout_centerHorizontal="true"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/des_daftar_pasangan"
+                android:id="@+id/list_hasil1"
+                android:scrollbars="vertical"
+                android:layout_marginTop="12dp"
+                android:background="@android:color/transparent"/>
 
-        <com.github.mikephil.charting.charts.PieChart
-            android:layout_below="@id/chart_title"
-            android:id="@+id/chart"
-            android:layout_width="match_parent"
-            android:layout_height="350dp"/>
+            <TextView
+                android:id="@+id/internet_hilang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/des_daftar_pasangan"
+                android:text="Hidupkan Koneksi Internet"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:visibility="gone"/>
 
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/chart_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CHART HASIL"
+                android:layout_below="@id/list_hasil1"
+                android:textColor="@color/main"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginVertical="12dp"
+                android:layout_centerHorizontal="true"/>
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:layout_below="@id/chart_title"
+                android:id="@+id/chart"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"/>
+
+            <TextView
+                android:id="@+id/text_pemenang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dari hasil voting pemilihan ketua senat stmik prabumulih tahun 2021/2022
+Nilai tertinggi diraih oleh no urut 02, dll atas nama xxxxx &amp; xxx
+Selamat atas terpilihnya kami ucapkan selamat bekerja"
+                android:layout_below="@id/chart"
+                android:textSize="16sp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_voters"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_pemenang"
+                android:layout_marginTop="12dp"
+                android:background="@android:color/transparent"
+                android:scrollbars="vertical" />
+
+        </RelativeLayout>
+    </ScrollView>
+
 
 </RelativeLayout>

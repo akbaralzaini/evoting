@@ -40,7 +40,7 @@ public class KandidatAdapter extends RecyclerView.Adapter<KandidatAdapter.MyView
         holder.mTextViewNama.setText(mKandidatList.get(position).getNama());
         holder.mTextViewKelas.setText(mKandidatList.get(position).getKelas());
 
-        String url = "https://voting.pkitapp.com/uploads/kandidat/"+mKandidatList.get(position).getId()+"/"+mKandidatList.get(position).getFoto();
+        String url = "https://voting.pkitapp.com/public/uploads/kandidat/"+mKandidatList.get(position).getId()+"/"+mKandidatList.get(position).getFoto();
         Picasso.get().load(url).resize(500,500).into(holder.mImageViewFoto);
 
        // holder.mTextViewUrut.setText(mKandidatList.get(position).getId());
@@ -73,7 +73,6 @@ public class KandidatAdapter extends RecyclerView.Adapter<KandidatAdapter.MyView
             super(itemView);
             mTextViewNama = itemView.findViewById(R.id.nama_kandidat);
             mTextViewKelas = itemView.findViewById(R.id.kelas_kandidat);
-           // mTextViewUrut = (TextView) itemView.findViewById(R.id.nomor_kandidat);
             mImageViewFoto = itemView.findViewById(R.id.gambar_kandidat);
         }
     }

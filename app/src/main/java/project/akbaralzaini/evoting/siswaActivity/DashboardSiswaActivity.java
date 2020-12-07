@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import project.akbaralzaini.evoting.LoginActivity;
 import project.akbaralzaini.evoting.R;
 import project.akbaralzaini.evoting.Rest.ApiClient;
 import project.akbaralzaini.evoting.Rest.ApiInterface;
@@ -31,7 +32,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class DashboardSiswaActivity extends Activity {
-    TextView bperolehan_suara;
+    TextView bperolehan_suara,btnLogout;
     TextView tInternetHilang;
     TextView namaProfil;
     TextView tEditProfil;
@@ -53,6 +54,7 @@ public class DashboardSiswaActivity extends Activity {
         sharedPrefManager = new SharedPrefManager(this);
         namaProfil.setText(sharedPrefManager.getSPNama());
         tEditProfil = findViewById(R.id.update_profil);
+        btnLogout = findViewById(R.id.logout);
 
         bperolehan_suara.setOnClickListener(view -> {
             Intent hasil = new Intent(DashboardSiswaActivity.this, HasilActivity.class);
@@ -77,6 +79,13 @@ public class DashboardSiswaActivity extends Activity {
 
         ma=this;
         refresh();
+
+        btnLogout.setOnClickListener(v -> {
+            sharedPrefManager.saveSPBoolean(SharedPrefManager.SP_SUDAH_LOGIN,false);
+            Intent login =  new Intent(DashboardSiswaActivity.this, LoginActivity.class);
+            startActivity(login);
+            finish();
+        });
     }
 
     public void refresh() {
